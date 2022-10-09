@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/pro2.dir/src/pro2.cpp.o -o pro2 
