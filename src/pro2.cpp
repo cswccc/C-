@@ -5,16 +5,18 @@
 #define ll long long
 using namespace std;
 
+const int maxn = 1000000+5;
+
 void Polynomial_work();
 void Mathematical_work();
-void Solve_equa_work();
+void Algebraic_expre_work();
 
 void Dialog()
 {
     puts("0: Exit");
     puts("1: Polynomial Arithmetic");
     puts("2: Mathematical Functions");
-    puts("3: Solve equations");
+    puts("3: Algebraic expression");
     printf("Please type the number before the function you want to do:");
 
     int x;
@@ -31,7 +33,7 @@ void Dialog()
         case 0: exit(0); break;
         case 1: Polynomial_work(); break;
         case 2: Mathematical_work(); break;
-        case 3: Solve_equa_work(); break;
+        case 3: Algebraic_expre_work(); break;
         default: break;
     }
 }
@@ -46,17 +48,31 @@ int main()
     return 0;
 }
 
+char formula[maxn];
+
 void Polynomial_work()
 {
+    cin.getline(formula,maxn);
+    printf("Please input the polynomial you want to solve:");
+    cin.getline(formula,maxn);
 
+    
 }
 
 void Mathematical_work()
 {
+    cin.getline(formula,maxn);
+    printf("Please input the mathematical function you want to solve:");
+    cin.getline(formula,maxn);
 
+    printf("%s",formula);
 }
 
-void Solve_equa_work()
+void Algebraic_expre_work()
 {
+    cin.getline(formula,maxn);
+    printf("Please input the equation you want to solve:");
+    cin.getline(formula,maxn);
 
+    printf("%s",formula);
 }
