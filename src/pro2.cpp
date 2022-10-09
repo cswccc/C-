@@ -51,6 +51,7 @@ int main()
 }
 
 char formula[maxn];
+int st[maxn],num;
 
 void mul(ll a[],ll b[], ll ans[],int lena, int lenb, int &len_ans)
 {
@@ -91,11 +92,24 @@ void add(ll a[], ll b[], ll ans[], int lena, int lenb, int &len_ans)
     }
 }
 
+inline void Solve_Brackets(int start, int end)
+{
+    
+}
+
 inline void Handle_Brackets(int start,int len)
 {
+    if(formula[start] == '(') st[++num] = start;
     for(int i = start; i < len; i++)
     {
-        
+        if(formula[i] == '(') Handle_Brackets(i,len);
+
+        if(formula[i] == ')')
+        {
+            if(num == 0) WrongDialog();
+            SolveBrackets(st[num],i);
+            num--;
+        }
     }
 }
 
@@ -104,8 +118,6 @@ void Polynomial_work()
     cin.getline(formula,maxn);
     printf("Please input the polynomial you want to solve:");
     cin.getline(formula,maxn);
-
-    Handle_Brackets(0,strlen(formula));
 }
 
 void Mathematical_work()
