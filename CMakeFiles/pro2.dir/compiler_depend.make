@@ -206,6 +206,9 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o: src/pro2.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/utility \
   /usr/include/c++/11/bits/stl_relops.h \
@@ -265,6 +268,10 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o: src/pro2.cpp \
 /usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
+
+/usr/include/string.h:
+
+/usr/include/c++/11/cstring:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
@@ -673,6 +680,8 @@ src/pro2.cpp:
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/strings.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 

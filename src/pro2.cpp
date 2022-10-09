@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <cstring>
 #include <algorithm>
 #define ll long long
 using namespace std;
 
 const int maxn = 1000000+5;
+const ll mod = 1e8;
 
 void Polynomial_work();
 void Mathematical_work();
@@ -50,13 +52,60 @@ int main()
 
 char formula[maxn];
 
+void mul(ll a[],ll b[], ll ans[],int lena, int lenb, int &len_ans)
+{
+    len_ans = lena + lenb;
+
+    memset(ans,0,lena+lenb);
+
+    for(int i = lena; i >= 1; i--)
+    for(int j = lenb; j >= 1; j--) {
+        ans[i+j] += a[i]*b[j];
+        
+        if(ans[i+j] >= mod)
+        {
+            ans[i+j-1] += ans[i+j]/mod;
+            ans[i+j] %= mod;
+        }
+    }
+
+    for(int i = len_ans; i >= 1; i--) ans[i-1] += ans[i]/mod,ans[i] %= mod;
+}
+
+void add(ll a[], ll b[], ll ans[], int lena, int lenb, int &len_ans)
+{
+    len_ans = max(lena,lenb);
+
+    memset(ans,0,len_ans);
+
+    for(int i = len_ans; i >= 1; i--)
+    {
+        if(i <= lena) ans[i] += a[i];
+        if(i <= lenb) ans[i] += b[i];
+
+        if(ans[i] >= mod)
+        {
+            ans[i-1] += ans[i]/mod;
+            ans[i] %= mod;
+        }
+    }
+}
+
+inline void Handle_Brackets(int start,int len)
+{
+    for(int i = start; i < len; i++)
+    {
+        
+    }
+}
+
 void Polynomial_work()
 {
     cin.getline(formula,maxn);
     printf("Please input the polynomial you want to solve:");
     cin.getline(formula,maxn);
 
-    
+    Handle_Brackets(0,strlen(formula));
 }
 
 void Mathematical_work()
