@@ -57,7 +57,7 @@ char formula[maxn];
 string Stack[maxn];
 char Operator[maxn];
 int top,num_operator;
-int bracket_place[maxn],num;
+int front_bracket[maxn],num;
 ll a[maxn],b[maxn],c[maxn];
 
 inline void Get_Num(ll a[], int len, int lena)
@@ -95,6 +95,16 @@ inline void Prepare_Mul()
     cout << s << endl;
 }
 
+inline void Prepare_Bracket()
+{
+    int start = front_bracket[num];
+
+    while(top != start)
+    {
+        
+    }
+}
+
 void Polynomial_work()
 {
     cin.getline(formula,maxn);
@@ -106,7 +116,7 @@ void Polynomial_work()
 
     for(int i = 0; i < len; i++)
     {
-        if(formula[i] == '(') bracket_place[++num] = top;
+        if(formula[i] == '(') front_bracket[++num] = top;
         else if(formula[i] >= '0' && formula[i] <= '9') Stack[top] += formula[i];
         else if(formula[i] == '*' || formula[i] == '+' || formula[i] == '-') {
             if(Operator[num_operator] == '*' && top > 1)
@@ -121,6 +131,8 @@ void Polynomial_work()
         {
             if(Operator[num_operator] == '*')
                 Prepare_Mul();
+            
+            Prepare_Bracket();
         }
     }
 }
