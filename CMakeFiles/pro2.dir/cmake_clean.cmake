@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pro2.dir/src/add.cpp.o.d"
   "CMakeFiles/pro2.dir/src/mul.cpp.o"
   "CMakeFiles/pro2.dir/src/mul.cpp.o.d"
+  "CMakeFiles/pro2.dir/src/numToString.cpp.o"
+  "CMakeFiles/pro2.dir/src/numToString.cpp.o.d"
   "CMakeFiles/pro2.dir/src/pro2.cpp.o"
   "CMakeFiles/pro2.dir/src/pro2.cpp.o.d"
   "pro2"

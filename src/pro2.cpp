@@ -4,6 +4,7 @@
 #include <cstring>
 #include <algorithm>
 #include "mul.hpp"
+#include "numToString.hpp"
 #define ll long long
 using namespace std;
 
@@ -73,35 +74,10 @@ inline void Get_Num(ll a[], int len, int lena)
     top--;
 }
 
-inline void Change_Each_Num(ll x, string &ret)
-{
-    if(x > 10) Change_Each_Num(x/10,ret);
-
-    ret += char(x%10 + '0');
-}
-
-inline string Change_Num_To_String(ll a[], int lena)
-{
-    string ret = "";
-
-    int i = 0;
-    while(a[i] == 0 && i <= lena) i++;
-
-    Change_Each_Num(a[i],ret);
-    for(i++; i <= lena; i++)
-    {
-        ll x = a[i];
-        while(x * 10 < mod) ret += '0', x *= 10;
-
-        Change_Each_Num(a[i],ret);
-    }
-
-    return ret;
-}
-
 inline void Prepare_Mul()
 {
     memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
+    num_operator--;
 
     int len1 = Stack[top].length(), len2 = Stack[top-1].length();
     int lena = ceil(len1/8.0), lenb = ceil(len2/8.0);
@@ -112,12 +88,11 @@ inline void Prepare_Mul()
 
     mul(a,b,c,lena,lenb,lenc);
 
-    for(int i = 0; i <= lenc; i++) printf("%lld ",c[i]);
-    puts("");
-
     string s = Change_Num_To_String(c,lenc);
 
-    cout<<s<<endl;
+    Stack[++top] = s;
+
+    cout << s << endl;
 }
 
 void Polynomial_work()
@@ -145,9 +120,7 @@ void Polynomial_work()
         else if(formula[i] == ')')
         {
             if(Operator[num_operator] == '*')
-            {
                 Prepare_Mul();
-            }
         }
     }
 }

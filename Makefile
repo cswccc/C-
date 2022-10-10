@@ -177,6 +177,30 @@ src/mul.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/mul.cpp.s
 .PHONY : src/mul.cpp.s
 
+src/numToString.o: src/numToString.cpp.o
+.PHONY : src/numToString.o
+
+# target to build an object file
+src/numToString.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/numToString.cpp.o
+.PHONY : src/numToString.cpp.o
+
+src/numToString.i: src/numToString.cpp.i
+.PHONY : src/numToString.i
+
+# target to preprocess a source file
+src/numToString.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/numToString.cpp.i
+.PHONY : src/numToString.cpp.i
+
+src/numToString.s: src/numToString.cpp.s
+.PHONY : src/numToString.s
+
+# target to generate assembly for a file
+src/numToString.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/numToString.cpp.s
+.PHONY : src/numToString.cpp.s
+
 src/pro2.o: src/pro2.cpp.o
 .PHONY : src/pro2.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... src/mul.o"
 	@echo "... src/mul.i"
 	@echo "... src/mul.s"
+	@echo "... src/numToString.o"
+	@echo "... src/numToString.i"
+	@echo "... src/numToString.s"
 	@echo "... src/pro2.o"
 	@echo "... src/pro2.i"
 	@echo "... src/pro2.s"
