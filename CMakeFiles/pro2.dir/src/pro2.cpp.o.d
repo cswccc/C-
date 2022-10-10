@@ -1,4 +1,4 @@
-CMakeFiles/pro2.dir/src/pro2.cpp.o: /root/C--1/src/pro2.cpp \
+CMakeFiles/pro2.dir/src/pro2.cpp.o: /root/Cpp-1/src/pro2.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

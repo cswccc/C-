@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/root/C--1/includes
+CXX_INCLUDES = -I/root/Cpp-1/includes
 
 CXX_FLAGS = 
 

@@ -24,7 +24,7 @@ void Dialog()
     int x;
     scanf("%d",&x);
 
-    printf("%d",x);
+    puts("2323232");
 
     while(x < 0 || x > 3)
     {
@@ -117,7 +117,7 @@ inline void Prepare_Mul()
 {
     memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
 
-    int len1 = strlen(Stack[top]), len2 = strlen(Stack[top-1]);
+    int len1 = Stack[top].length(), len2 = Stack[top-1].length();
     int lena = ceil(len1/8.0), lenb = ceil(len2/8.0);
     
     Get_Num(a,len1,lena);
@@ -144,7 +144,7 @@ void Polynomial_work()
     for(int i = 0; i < len; i++)
     {
         if(formula[i] == '(') bracket_place[++num] = top;
-        else if(formula[i] >= '0' && formula <= '9') Stack[top] += formula[i];
+        else if(formula[i] >= '0' && formula[i] <= '9') Stack[top] += formula[i];
         else if(formula[i] == '*' || formula[i] == '+' || formula[i] == '-') {
             if(Operator[num_operator] == '*')
             {
