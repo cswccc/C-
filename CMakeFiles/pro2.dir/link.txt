@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/pro2.dir/src/pro2.cpp.o -o pro2 
+/usr/bin/c++ CMakeFiles/pro2.dir/src/add.cpp.o CMakeFiles/pro2.dir/src/mul.cpp.o CMakeFiles/pro2.dir/src/pro2.cpp.o -o pro2 

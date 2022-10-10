@@ -129,6 +129,54 @@ pro2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/build
 .PHONY : pro2/fast
 
+src/add.o: src/add.cpp.o
+.PHONY : src/add.o
+
+# target to build an object file
+src/add.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/add.cpp.o
+.PHONY : src/add.cpp.o
+
+src/add.i: src/add.cpp.i
+.PHONY : src/add.i
+
+# target to preprocess a source file
+src/add.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/add.cpp.i
+.PHONY : src/add.cpp.i
+
+src/add.s: src/add.cpp.s
+.PHONY : src/add.s
+
+# target to generate assembly for a file
+src/add.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/add.cpp.s
+.PHONY : src/add.cpp.s
+
+src/mul.o: src/mul.cpp.o
+.PHONY : src/mul.o
+
+# target to build an object file
+src/mul.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/mul.cpp.o
+.PHONY : src/mul.cpp.o
+
+src/mul.i: src/mul.cpp.i
+.PHONY : src/mul.i
+
+# target to preprocess a source file
+src/mul.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/mul.cpp.i
+.PHONY : src/mul.cpp.i
+
+src/mul.s: src/mul.cpp.s
+.PHONY : src/mul.s
+
+# target to generate assembly for a file
+src/mul.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/mul.cpp.s
+.PHONY : src/mul.cpp.s
+
 src/pro2.o: src/pro2.cpp.o
 .PHONY : src/pro2.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pro2"
+	@echo "... src/add.o"
+	@echo "... src/add.i"
+	@echo "... src/add.s"
+	@echo "... src/mul.o"
+	@echo "... src/mul.i"
+	@echo "... src/mul.s"
 	@echo "... src/pro2.o"
 	@echo "... src/pro2.i"
 	@echo "... src/pro2.s"
