@@ -24,6 +24,8 @@ void Dialog()
     int x;
     scanf("%d",&x);
 
+    printf("%d",x);
+
     while(x < 0 || x > 3)
     {
         printf("Wrong input! The number needs to be between 0 and 3. Please type the number again:");
@@ -93,32 +95,67 @@ void add(ll a[], ll b[], ll ans[], int lena, int lenb, int &len_ans)
 
 string Stack[maxn];
 char Operator[maxn];
-int top = 1,num_operator;
+int top,num_operator;
 int bracket_place[maxn],num;
+ll a[maxn],b[maxn],c[maxn];
 
-inline void solve(int start)
+inline void Get_Num(ll a[], int len, int lena)
 {
+    int ci = 0;
+    for(int i = lena-1; i >= 0; i--)
+    {
+        if((Stack[top][i]-'0')*pow(10,ci)+a[lena] >= mod) lena--,ci = 0;
 
+        a[lena] = (Stack[top][i]-'0')*pow(10,ci)+a[lena];
+        ci++;
+    }
+
+    top--;
+}
+
+inline void Prepare_Mul()
+{
+    memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
+
+    int len1 = strlen(Stack[top]), len2 = strlen(Stack[top-1]);
+    int lena = ceil(len1/8.0), lenb = ceil(len2/8.0);
+    
+    Get_Num(a,len1,lena);
+    Get_Num(b,len2,lenb);
+
+    for(int i = 1; i <= lena; i++) printf("%lld ",a[i]);
+
+    puts("");
+
+    for(int i = 1; i <= lenb; i++) printf("%lld ",b[i]);
 }
 
 void Polynomial_work()
 {
     cin.getline(formula,maxn);
     printf("Please input the polynomial you want to solve:");
-    
+    cin.getline(formula,maxn);
+
+    printf("%s\n",formula);
+
     int len = strlen(formula);
-    bool flag = false;
+    top = 1;
 
     for(int i = 0; i < len; i++)
     {
         if(formula[i] == '(') bracket_place[++num] = top;
         else if(formula[i] >= '0' && formula <= '9') Stack[top] += formula[i];
-        else if(formula[i] == '*') flag = true;
-        else if(formula[i] == '+' || formula[i] == '-') Operator[++num_operator] = formula[i];
+        else if(formula[i] == '*' || formula[i] == '+' || formula[i] == '-') {
+            if(Operator[num_operator] == '*')
+            {
+                Prepare_Mul();
+            }
+            Operator[++num_operator] = formula[i];
+        }
+
         else if(formula[i] == ')')
         {
-            solve(bracket_place[num]);
-            num--;
+            
         }
     }
 }
@@ -128,8 +165,6 @@ void Mathematical_work()
     cin.getline(formula,maxn);
     printf("Please input the mathematical function you want to solve:");
     cin.getline(formula,maxn);
-
-    printf("%s",formula);
 }
 
 void Algebraic_expre_work()
@@ -137,6 +172,4 @@ void Algebraic_expre_work()
     cin.getline(formula,maxn);
     printf("Please input the equation you want to solve:");
     cin.getline(formula,maxn);
-
-    printf("%s",formula);
 }
