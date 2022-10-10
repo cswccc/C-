@@ -51,7 +51,6 @@ int main()
 }
 
 char formula[maxn];
-int st[maxn],num;
 
 void mul(ll a[],ll b[], ll ans[],int lena, int lenb, int &len_ans)
 {
@@ -92,32 +91,36 @@ void add(ll a[], ll b[], ll ans[], int lena, int lenb, int &len_ans)
     }
 }
 
-inline void Solve_Brackets(int start, int end)
-{
-    
-}
+string Stack[maxn];
+char Operator[maxn];
+int top = 1,num_operator;
+int bracket_place[maxn],num;
 
-inline void Handle_Brackets(int start,int len)
+inline void solve(int start)
 {
-    if(formula[start] == '(') st[++num] = start;
-    for(int i = start; i < len; i++)
-    {
-        if(formula[i] == '(') Handle_Brackets(i,len);
 
-        if(formula[i] == ')')
-        {
-            if(num == 0) WrongDialog();
-            SolveBrackets(st[num],i);
-            num--;
-        }
-    }
 }
 
 void Polynomial_work()
 {
     cin.getline(formula,maxn);
     printf("Please input the polynomial you want to solve:");
-    cin.getline(formula,maxn);
+    
+    int len = strlen(formula);
+    bool flag = false;
+
+    for(int i = 0; i < len; i++)
+    {
+        if(formula[i] == '(') bracket_place[++num] = top;
+        else if(formula[i] >= '0' && formula <= '9') Stack[top] += formula[i];
+        else if(formula[i] == '*') flag = true;
+        else if(formula[i] == '+' || formula[i] == '-') Operator[++num_operator] = formula[i];
+        else if(formula[i] == ')')
+        {
+            solve(bracket_place[num]);
+            num--;
+        }
+    }
 }
 
 void Mathematical_work()
