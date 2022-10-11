@@ -7,7 +7,7 @@ const ll mod = 1e8;
 
 void Change_Each_Num(ll x, string &ret)
 {
-    if(x > 10) Change_Each_Num(x/10,ret);
+    if(x >= 10) Change_Each_Num(x/10,ret);
 
     ret += char(x%10 + '0');
 }

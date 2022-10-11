@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Cpp-1
+CMAKE_SOURCE_DIR = /root/Cpp-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Cpp-1
+CMAKE_BINARY_DIR = /root/Cpp-2
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pro2.dir/depend.make
@@ -72,58 +72,58 @@ include CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/add.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/add.cpp.o: src/add.cpp
 CMakeFiles/pro2.dir/src/add.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pro2.dir/src/add.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/add.cpp.o -MF CMakeFiles/pro2.dir/src/add.cpp.o.d -o CMakeFiles/pro2.dir/src/add.cpp.o -c /root/Cpp-1/src/add.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pro2.dir/src/add.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/add.cpp.o -MF CMakeFiles/pro2.dir/src/add.cpp.o.d -o CMakeFiles/pro2.dir/src/add.cpp.o -c /root/Cpp-2/src/add.cpp
 
 CMakeFiles/pro2.dir/src/add.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pro2.dir/src/add.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-1/src/add.cpp > CMakeFiles/pro2.dir/src/add.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-2/src/add.cpp > CMakeFiles/pro2.dir/src/add.cpp.i
 
 CMakeFiles/pro2.dir/src/add.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pro2.dir/src/add.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-1/src/add.cpp -o CMakeFiles/pro2.dir/src/add.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-2/src/add.cpp -o CMakeFiles/pro2.dir/src/add.cpp.s
 
 CMakeFiles/pro2.dir/src/mul.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/mul.cpp.o: src/mul.cpp
 CMakeFiles/pro2.dir/src/mul.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pro2.dir/src/mul.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/mul.cpp.o -MF CMakeFiles/pro2.dir/src/mul.cpp.o.d -o CMakeFiles/pro2.dir/src/mul.cpp.o -c /root/Cpp-1/src/mul.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pro2.dir/src/mul.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/mul.cpp.o -MF CMakeFiles/pro2.dir/src/mul.cpp.o.d -o CMakeFiles/pro2.dir/src/mul.cpp.o -c /root/Cpp-2/src/mul.cpp
 
 CMakeFiles/pro2.dir/src/mul.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pro2.dir/src/mul.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-1/src/mul.cpp > CMakeFiles/pro2.dir/src/mul.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-2/src/mul.cpp > CMakeFiles/pro2.dir/src/mul.cpp.i
 
 CMakeFiles/pro2.dir/src/mul.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pro2.dir/src/mul.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-1/src/mul.cpp -o CMakeFiles/pro2.dir/src/mul.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-2/src/mul.cpp -o CMakeFiles/pro2.dir/src/mul.cpp.s
 
 CMakeFiles/pro2.dir/src/numToString.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/numToString.cpp.o: src/numToString.cpp
 CMakeFiles/pro2.dir/src/numToString.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pro2.dir/src/numToString.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/numToString.cpp.o -MF CMakeFiles/pro2.dir/src/numToString.cpp.o.d -o CMakeFiles/pro2.dir/src/numToString.cpp.o -c /root/Cpp-1/src/numToString.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pro2.dir/src/numToString.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/numToString.cpp.o -MF CMakeFiles/pro2.dir/src/numToString.cpp.o.d -o CMakeFiles/pro2.dir/src/numToString.cpp.o -c /root/Cpp-2/src/numToString.cpp
 
 CMakeFiles/pro2.dir/src/numToString.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pro2.dir/src/numToString.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-1/src/numToString.cpp > CMakeFiles/pro2.dir/src/numToString.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-2/src/numToString.cpp > CMakeFiles/pro2.dir/src/numToString.cpp.i
 
 CMakeFiles/pro2.dir/src/numToString.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pro2.dir/src/numToString.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-1/src/numToString.cpp -o CMakeFiles/pro2.dir/src/numToString.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-2/src/numToString.cpp -o CMakeFiles/pro2.dir/src/numToString.cpp.s
 
 CMakeFiles/pro2.dir/src/pro2.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/pro2.cpp.o: src/pro2.cpp
 CMakeFiles/pro2.dir/src/pro2.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pro2.dir/src/pro2.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/pro2.cpp.o -MF CMakeFiles/pro2.dir/src/pro2.cpp.o.d -o CMakeFiles/pro2.dir/src/pro2.cpp.o -c /root/Cpp-1/src/pro2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pro2.dir/src/pro2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/pro2.cpp.o -MF CMakeFiles/pro2.dir/src/pro2.cpp.o.d -o CMakeFiles/pro2.dir/src/pro2.cpp.o -c /root/Cpp-2/src/pro2.cpp
 
 CMakeFiles/pro2.dir/src/pro2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pro2.dir/src/pro2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-1/src/pro2.cpp > CMakeFiles/pro2.dir/src/pro2.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-2/src/pro2.cpp > CMakeFiles/pro2.dir/src/pro2.cpp.i
 
 CMakeFiles/pro2.dir/src/pro2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pro2.dir/src/pro2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-1/src/pro2.cpp -o CMakeFiles/pro2.dir/src/pro2.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-2/src/pro2.cpp -o CMakeFiles/pro2.dir/src/pro2.cpp.s
 
 # Object files for target pro2
 pro2_OBJECTS = \
@@ -141,7 +141,7 @@ pro2: CMakeFiles/pro2.dir/src/numToString.cpp.o
 pro2: CMakeFiles/pro2.dir/src/pro2.cpp.o
 pro2: CMakeFiles/pro2.dir/build.make
 pro2: CMakeFiles/pro2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Cpp-1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable pro2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable pro2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pro2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/pro2.dir/clean:
 .PHONY : CMakeFiles/pro2.dir/clean
 
 CMakeFiles/pro2.dir/depend:
-	cd /root/Cpp-1 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Cpp-1 /root/Cpp-1 /root/Cpp-1 /root/Cpp-1 /root/Cpp-1/CMakeFiles/pro2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/Cpp-2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Cpp-2 /root/Cpp-2 /root/Cpp-2 /root/Cpp-2 /root/Cpp-2/CMakeFiles/pro2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pro2.dir/depend
 

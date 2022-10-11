@@ -1,4 +1,4 @@
-CMakeFiles/pro2.dir/src/pro2.cpp.o: /root/Cpp-1/src/pro2.cpp \
+CMakeFiles/pro2.dir/src/pro2.cpp.o: /root/Cpp-2/src/pro2.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -191,5 +191,5 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o: /root/Cpp-1/src/pro2.cpp \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /usr/include/c++/11/pstl/execution_defs.h /root/Cpp-1/includes/mul.hpp \
- /root/Cpp-1/includes/numToString.hpp
+ /usr/include/c++/11/pstl/execution_defs.h /root/Cpp-2/includes/mul.hpp \
+ /root/Cpp-2/includes/add.hpp /root/Cpp-2/includes/numToString.hpp
