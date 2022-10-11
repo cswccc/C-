@@ -79,7 +79,7 @@ inline void Prepare_Mul()
     memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
     num_operator--;
 
-    // for(int i = 1; i <= top; i++) cout <<"++++"<<Stack[i]<<endl;
+    // for(int i = 1; i <= top; i++) cout <<"++++"<<symbol[i]<<' '<<Stack[i]<<endl;
 
     int len1 = Stack[top].length(), len2 = Stack[top-1].length();
     int lena = ceil(len1/8.0), lenb = ceil(len2/8.0);
@@ -102,7 +102,7 @@ inline void Prepare_Mul()
 
     string s = Change_Num_To_String(c,lenc);
 
-    // Stack[++top] = s;
+    Stack[++top] = s;
     // cout<<"===="<<s<<endl;
 
     // for(int i = 1; i <= top; i++)
@@ -114,6 +114,11 @@ inline void Prepare_Mul()
 inline void Prepare_Bracket()
 {
     int start = front_bracket[num];
+
+    for(int i = 1; i <= top; i++)
+    cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
+
+    puts("------------");
 
     for(int i = start; i < top; i++)
     {
@@ -128,7 +133,7 @@ inline void Prepare_Bracket()
         Stack[i] = ""; symbol[i] = false;
 
         Get_Num(b,len2,lenb,i+1);
-        Stack[i+1] = ""; symbol[i] = false;
+        Stack[i+1] = ""; symbol[i+1] = false;
 
         // for(int j = 1; j <= lena; j++) printf("%lld ",a[j]);
         // puts("");
@@ -148,11 +153,12 @@ inline void Prepare_Bracket()
     Stack[start] = Stack[top];
     symbol[start] = symbol[top];
     Stack[top] = ""; symbol[top] = false;
+    top = start;
     
-    // for(int i = 1; i <= top; i++)
-    // cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
+    for(int i = 1; i <= top; i++)
+    cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
 
-    // puts("------------");
+    puts("------------");
 }
 
 inline void PreHandle()
@@ -184,9 +190,8 @@ void Polynomial_work()
         else if(formula[i] >= '0' && formula[i] <= '9') Stack[top] += formula[i], symbol[top] = false;
         else if(formula[i] == '*' || formula[i] == '+' || formula[i] == '-') {
             if(Operator[num_operator] == '*' && top > 1)
-            {
                 Prepare_Mul();
-            }
+
             top++;
             Operator[++num_operator] = formula[i];
         }
