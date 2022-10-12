@@ -81,7 +81,7 @@ inline void Prepare_Mul()
     Operator[num_operator] = 0;
     num_operator--;
 
-    for(int i = 1; i <= top; i++) cout <<"++++"<<symbol[i]<<' '<<Stack[i]<<endl;
+    // for(int i = 1; i <= top; i++) cout <<"++++"<<symbol[i]<<' '<<Stack[i]<<endl;
 
     int len1 = Stack[top].length(), len2 = Stack[top-1].length();
     bool symbol1 = symbol[top], symbol2 = symbol[top-1];
@@ -95,11 +95,11 @@ inline void Prepare_Mul()
     Stack[top] = ""; symbol[top] = false; top--;
     
 
-    for(int i = 0; i <= lena; i++) printf("%lld ",a[i]);
-    puts("");
+    // for(int i = 0; i <= lena; i++) printf("%lld ",a[i]);
+    // puts("");
 
-    for(int i = 0; i <= lenb; i++) printf("%lld ",b[i]);
-    puts("");
+    // for(int i = 0; i <= lenb; i++) printf("%lld ",b[i]);
+    // puts("");
 
     mul(a,b,c,lena,lenb,lenc,symbol1,symbol2,symbol[top+1]);
 
@@ -117,10 +117,10 @@ inline void Prepare_Mul()
 inline void Work_For_Add(int start)
 {
     puts("add");
-    for(int i = 1; i <= top; i++)
-    cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
+    // for(int i = 1; i <= top; i++)
+    // cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
 
-    puts("------------");
+    // puts("------------");
 
     int cnt = 0;
 
@@ -139,13 +139,13 @@ inline void Work_For_Add(int start)
         Get_Num(b,len2,lenb,i+1);
         Stack[i+1] = ""; symbol[i+1] = false;
 
-        for(int j = 1; j <= lena; j++) printf("%lld ",a[j]);
-        puts("");
-        for(int j = 1; j <= lenb; j++) printf("%lld ",b[j]);
-        puts("");
+        // for(int j = 1; j <= lena; j++) printf("%lld ",a[j]);
+        // puts("");
+        // for(int j = 1; j <= lenb; j++) printf("%lld ",b[j]);
+        // puts("");
 
         if(Operator[i] == '+') add(a,b,c,lena,lenb,lenc,symbol1,symbol2,symbol[i+1]);
-        else if(Operator[i] == '-') add(a,b,c,lena,lenb,lenc,symbol1,!symbol2,symbol[i+1]);
+        else add(a,b,c,lena,lenb,lenc,symbol1,!symbol2,symbol[i+1]);
         Operator[i] = 0; cnt++;
 
         string s = Change_Num_To_String(c,lenc);
@@ -196,7 +196,7 @@ void Polynomial_work()
     for(int i = 0; i < len; i++)
     {
         if(formula[i] == '(') front_bracket[++num] = top;
-        else if(formula[i] >= '0' && formula[i] <= '9') Stack[top] += formula[i], symbol[top] = false;
+        else if(formula[i] >= '0' && formula[i] <= '9') Stack[top] += formula[i];
         else if(formula[i] == '*' || formula[i] == '+' || formula[i] == '-') {
             if(Operator[num_operator] == '*' && top > 1)
                 Prepare_Mul();

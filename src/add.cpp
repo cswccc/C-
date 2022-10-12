@@ -24,10 +24,10 @@ void add(ll a[], ll b[], ll ans[], int lena, int lenb, int &len_ans, bool sya, b
     {
         len_ans = max(lena,lenb);
 
-        for(int i = len_ans; i >= 1; i--)
+        for(int i = 1; i <= len_ans; i++)
         {
-            if(i <= lena) ans[i] += a[i];
-            if(i <= lenb) ans[i] += b[i];
+            if(i <= lena) ans[lena-i+1] += a[lena-i+1];
+            if(i <= lenb) ans[lenb-i+1] += b[lenb-i+1];
 
             if(ans[i] >= mod)
             {
@@ -45,18 +45,18 @@ void add(ll a[], ll b[], ll ans[], int lena, int lenb, int &len_ans, bool sya, b
         {
             len_ans = lena;
 
-            for(int i = len_ans; i >= 1; i--)
+            for(int i = 1; i <= len_ans; i++)
             {
-                if(i <= lena) ans[i] += a[i];
-                if(i <= lenb) ans[i] -= b[i];
+                if(i <= lena) ans[len_ans-i+1] += a[lena-i+1];
+                if(i <= lenb) ans[len_ans-i+1] -= b[lenb-i+1];
 
-                if(ans[i] >= mod)
+                if(ans[len_ans-i+1] >= mod)
                 {
-                    ans[i-1] += ans[i]/mod; ans[i] %= mod;
+                    ans[len_ans-i] += ans[len_ans-i+1]/mod; ans[len_ans-i+1] %= mod;
                 }
-                else if(ans[i] < 0)
+                else if(ans[len_ans-i+1] < 0)
                 {
-                    ans[i-1] -= 1; ans[i] += mod;
+                    ans[len_ans-i] -= 1; ans[len_ans-i+1] += mod;
                 }
             }
             sy_ans = sya;
@@ -65,18 +65,18 @@ void add(ll a[], ll b[], ll ans[], int lena, int lenb, int &len_ans, bool sya, b
         {
             len_ans = lenb;
 
-            for(int i = len_ans; i >= 1; i--)
+            for(int i = 1; i <= len_ans; i++)
             {
-                if(i <= lena) ans[i] -= a[i];
-                if(i <= lenb) ans[i] += b[i];
+                if(i <= lena) ans[len_ans-i+1] -= a[lena-i+1];
+                if(i <= lenb) ans[len_ans-i+1] += b[lenb-i+1];
 
-                if(ans[i] >= mod)
+                if(ans[len_ans-i+1] >= mod)
                 {
-                    ans[i-1] += ans[i]/mod; ans[i] %= mod;
+                    ans[len_ans-i] += ans[len_ans-i+1]/mod; ans[len_ans-i+1] %= mod;
                 }
-                else if(ans[i] < 0)
+                else if(ans[len_ans-i+1] < 0)
                 {
-                    ans[i-1] -= 1; ans[i] += mod;
+                    ans[len_ans-i] -= 1; ans[len_ans-i+1] += mod;
                 }
             }
             sy_ans = syb;
