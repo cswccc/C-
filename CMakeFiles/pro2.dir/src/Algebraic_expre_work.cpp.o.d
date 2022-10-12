@@ -1,5 +1,5 @@
-CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o: \
- /root/Cpp-2/src/Polynomial_work.cpp /usr/include/stdc-predef.h \
+CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o: \
+ /root/Cpp-2/src/Algebraic_expre_work.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

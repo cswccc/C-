@@ -81,12 +81,12 @@ clean: CMakeFiles/pro2.dir/clean
 CMakeFiles/pro2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target pro2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target pro2"
 .PHONY : CMakeFiles/pro2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pro2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/Cpp-2/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Cpp-2/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pro2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/Cpp-2/CMakeFiles 0
 .PHONY : CMakeFiles/pro2.dir/rule

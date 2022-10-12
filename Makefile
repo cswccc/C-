@@ -129,6 +129,30 @@ pro2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/build
 .PHONY : pro2/fast
 
+src/Algebraic_expre_work.o: src/Algebraic_expre_work.cpp.o
+.PHONY : src/Algebraic_expre_work.o
+
+# target to build an object file
+src/Algebraic_expre_work.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o
+.PHONY : src/Algebraic_expre_work.cpp.o
+
+src/Algebraic_expre_work.i: src/Algebraic_expre_work.cpp.i
+.PHONY : src/Algebraic_expre_work.i
+
+# target to preprocess a source file
+src/Algebraic_expre_work.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.i
+.PHONY : src/Algebraic_expre_work.cpp.i
+
+src/Algebraic_expre_work.s: src/Algebraic_expre_work.cpp.s
+.PHONY : src/Algebraic_expre_work.s
+
+# target to generate assembly for a file
+src/Algebraic_expre_work.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.s
+.PHONY : src/Algebraic_expre_work.cpp.s
+
 src/Get_Num.o: src/Get_Num.cpp.o
 .PHONY : src/Get_Num.o
 
@@ -282,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pro2"
+	@echo "... src/Algebraic_expre_work.o"
+	@echo "... src/Algebraic_expre_work.i"
+	@echo "... src/Algebraic_expre_work.s"
 	@echo "... src/Get_Num.o"
 	@echo "... src/Get_Num.i"
 	@echo "... src/Get_Num.s"

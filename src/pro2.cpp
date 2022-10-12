@@ -8,6 +8,7 @@
 #include "Get_Num.hpp"
 #include "Polynomial_work.hpp"
 #include "numToString.hpp"
+#include "Algebraic_expre_work.hpp"
 #define ll long long
 using namespace std;
 
@@ -15,7 +16,6 @@ const int maxn = 1000000+5;
 const ll mod = 1e8;
 
 void Mathematical_work();
-void Algebraic_expre_work();
 
 void Dialog()
 {
@@ -57,9 +57,4 @@ int main()
 void Mathematical_work()
 {
     printf("Please input the mathematical function you want to solve:");
-}
-
-void Algebraic_expre_work()
-{
-    printf("Please input the algebraic expression you want to solve:");
 }

@@ -7,6 +7,7 @@
 #include "add.hpp"
 #include "Get_Num.hpp"
 #include "numToString.hpp"
+#include "Polynomial_work.hpp"
 #define ll long long
 using namespace std;
 
@@ -24,7 +25,7 @@ bool symbol[maxn];
 
 void Prepare_Mul()
 {
-    // puts("mul");
+    puts("mul");
     memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
     Operator[num_operator] = 0;
     num_operator--;
@@ -56,15 +57,15 @@ void Prepare_Mul()
     Stack[++top] = s;
     // cout<<"===="<<s<<endl;
 
-    // for(int i = 1; i <= top; i++)
-    //     cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
+    for(int i = 1; i <= top; i++)
+        cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
     
-    // puts("------------");
+    puts("------------");
 }
 
 void Work_For_Add(int start)
 {
-    // puts("add");
+    puts("add");
     // for(int i = 1; i <= top; i++)
     // cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
 
@@ -112,13 +113,13 @@ void Work_For_Add(int start)
         num_operator -= cnt;
     }
     
-    // for(int i = 1; i <= top; i++)
-    // cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
+    for(int i = 1; i <= top; i++)
+    cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
 
-    // puts("------------");
+    puts("------------");
 }
 
-void PreHandle()
+void PreHandle_1()
 {
     top = 0;
 
@@ -129,15 +130,12 @@ void PreHandle()
     memset(Operator,0,sizeof(Operator));
 
     memset(symbol,false,sizeof(symbol));
+
+    memset(formula,0,sizeof(formula));
 }
 
-void Polynomial_work()
+void work()
 {
-    PreHandle();
-    cin.getline(formula,maxn);
-    printf("Please input the polynomial you want to solve:");
-    cin.getline(formula,maxn);
-
     int len = strlen(formula);
     top = 1;
 
@@ -168,4 +166,26 @@ void Polynomial_work()
 
     if(symbol[1]) cout<<'-';
     cout<<Stack[1]<<endl;
+}
+
+void Polynomial_work()
+{
+    PreHandle_1();
+    cin.getline(formula,maxn);
+    printf("Please input the polynomial you want to solve:");
+    cin.getline(formula,maxn);
+
+    work();
+}
+
+void Input_Formula(string s)
+{
+    PreHandle_1();
+
+    int len = s.length();
+
+    for(int i = 0; i < len; i++)
+        formula[i] = s[i];
+    
+    work();
 }
