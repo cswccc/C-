@@ -129,6 +129,54 @@ pro2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/build
 .PHONY : pro2/fast
 
+src/Get_Num.o: src/Get_Num.cpp.o
+.PHONY : src/Get_Num.o
+
+# target to build an object file
+src/Get_Num.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Get_Num.cpp.o
+.PHONY : src/Get_Num.cpp.o
+
+src/Get_Num.i: src/Get_Num.cpp.i
+.PHONY : src/Get_Num.i
+
+# target to preprocess a source file
+src/Get_Num.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Get_Num.cpp.i
+.PHONY : src/Get_Num.cpp.i
+
+src/Get_Num.s: src/Get_Num.cpp.s
+.PHONY : src/Get_Num.s
+
+# target to generate assembly for a file
+src/Get_Num.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Get_Num.cpp.s
+.PHONY : src/Get_Num.cpp.s
+
+src/Polynomial_work.o: src/Polynomial_work.cpp.o
+.PHONY : src/Polynomial_work.o
+
+# target to build an object file
+src/Polynomial_work.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o
+.PHONY : src/Polynomial_work.cpp.o
+
+src/Polynomial_work.i: src/Polynomial_work.cpp.i
+.PHONY : src/Polynomial_work.i
+
+# target to preprocess a source file
+src/Polynomial_work.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.i
+.PHONY : src/Polynomial_work.cpp.i
+
+src/Polynomial_work.s: src/Polynomial_work.cpp.s
+.PHONY : src/Polynomial_work.s
+
+# target to generate assembly for a file
+src/Polynomial_work.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.s
+.PHONY : src/Polynomial_work.cpp.s
+
 src/add.o: src/add.cpp.o
 .PHONY : src/add.o
 
@@ -234,6 +282,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pro2"
+	@echo "... src/Get_Num.o"
+	@echo "... src/Get_Num.i"
+	@echo "... src/Get_Num.s"
+	@echo "... src/Polynomial_work.o"
+	@echo "... src/Polynomial_work.i"
+	@echo "... src/Polynomial_work.s"
 	@echo "... src/add.o"
 	@echo "... src/add.i"
 	@echo "... src/add.s"

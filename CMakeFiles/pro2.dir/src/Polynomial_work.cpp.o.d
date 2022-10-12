@@ -1,5 +1,6 @@
-CMakeFiles/pro2.dir/src/pro2.cpp.o: /root/Cpp-2/src/pro2.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o: \
+ /root/Cpp-2/src/Polynomial_work.cpp /usr/include/stdc-predef.h \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -193,5 +194,4 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o: /root/Cpp-2/src/pro2.cpp \
  /usr/include/c++/11/bits/vector.tcc \
  /usr/include/c++/11/pstl/execution_defs.h /root/Cpp-2/includes/mul.hpp \
  /root/Cpp-2/includes/add.hpp /root/Cpp-2/includes/Get_Num.hpp \
- /root/Cpp-2/includes/Polynomial_work.hpp \
  /root/Cpp-2/includes/numToString.hpp

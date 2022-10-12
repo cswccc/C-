@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/root/Cpp-2/src/Get_Num.cpp" "CMakeFiles/pro2.dir/src/Get_Num.cpp.o" "gcc" "CMakeFiles/pro2.dir/src/Get_Num.cpp.o.d"
+  "/root/Cpp-2/src/Polynomial_work.cpp" "CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o" "gcc" "CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o.d"
   "/root/Cpp-2/src/add.cpp" "CMakeFiles/pro2.dir/src/add.cpp.o" "gcc" "CMakeFiles/pro2.dir/src/add.cpp.o.d"
   "/root/Cpp-2/src/mul.cpp" "CMakeFiles/pro2.dir/src/mul.cpp.o" "gcc" "CMakeFiles/pro2.dir/src/mul.cpp.o.d"
   "/root/Cpp-2/src/numToString.cpp" "CMakeFiles/pro2.dir/src/numToString.cpp.o" "gcc" "CMakeFiles/pro2.dir/src/numToString.cpp.o.d"

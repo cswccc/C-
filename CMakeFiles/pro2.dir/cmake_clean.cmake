@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/pro2.dir/src/Get_Num.cpp.o"
+  "CMakeFiles/pro2.dir/src/Get_Num.cpp.o.d"
+  "CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o"
+  "CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o.d"
   "CMakeFiles/pro2.dir/src/add.cpp.o"
   "CMakeFiles/pro2.dir/src/add.cpp.o.d"
   "CMakeFiles/pro2.dir/src/mul.cpp.o"

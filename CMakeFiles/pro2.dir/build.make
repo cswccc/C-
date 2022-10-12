@@ -69,10 +69,38 @@ include CMakeFiles/pro2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pro2.dir/flags.make
 
+CMakeFiles/pro2.dir/src/Get_Num.cpp.o: CMakeFiles/pro2.dir/flags.make
+CMakeFiles/pro2.dir/src/Get_Num.cpp.o: src/Get_Num.cpp
+CMakeFiles/pro2.dir/src/Get_Num.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pro2.dir/src/Get_Num.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/Get_Num.cpp.o -MF CMakeFiles/pro2.dir/src/Get_Num.cpp.o.d -o CMakeFiles/pro2.dir/src/Get_Num.cpp.o -c /root/Cpp-2/src/Get_Num.cpp
+
+CMakeFiles/pro2.dir/src/Get_Num.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pro2.dir/src/Get_Num.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-2/src/Get_Num.cpp > CMakeFiles/pro2.dir/src/Get_Num.cpp.i
+
+CMakeFiles/pro2.dir/src/Get_Num.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pro2.dir/src/Get_Num.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-2/src/Get_Num.cpp -o CMakeFiles/pro2.dir/src/Get_Num.cpp.s
+
+CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o: CMakeFiles/pro2.dir/flags.make
+CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o: src/Polynomial_work.cpp
+CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o -MF CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o.d -o CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o -c /root/Cpp-2/src/Polynomial_work.cpp
+
+CMakeFiles/pro2.dir/src/Polynomial_work.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pro2.dir/src/Polynomial_work.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Cpp-2/src/Polynomial_work.cpp > CMakeFiles/pro2.dir/src/Polynomial_work.cpp.i
+
+CMakeFiles/pro2.dir/src/Polynomial_work.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pro2.dir/src/Polynomial_work.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Cpp-2/src/Polynomial_work.cpp -o CMakeFiles/pro2.dir/src/Polynomial_work.cpp.s
+
 CMakeFiles/pro2.dir/src/add.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/add.cpp.o: src/add.cpp
 CMakeFiles/pro2.dir/src/add.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pro2.dir/src/add.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pro2.dir/src/add.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/add.cpp.o -MF CMakeFiles/pro2.dir/src/add.cpp.o.d -o CMakeFiles/pro2.dir/src/add.cpp.o -c /root/Cpp-2/src/add.cpp
 
 CMakeFiles/pro2.dir/src/add.cpp.i: cmake_force
@@ -86,7 +114,7 @@ CMakeFiles/pro2.dir/src/add.cpp.s: cmake_force
 CMakeFiles/pro2.dir/src/mul.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/mul.cpp.o: src/mul.cpp
 CMakeFiles/pro2.dir/src/mul.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pro2.dir/src/mul.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pro2.dir/src/mul.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/mul.cpp.o -MF CMakeFiles/pro2.dir/src/mul.cpp.o.d -o CMakeFiles/pro2.dir/src/mul.cpp.o -c /root/Cpp-2/src/mul.cpp
 
 CMakeFiles/pro2.dir/src/mul.cpp.i: cmake_force
@@ -100,7 +128,7 @@ CMakeFiles/pro2.dir/src/mul.cpp.s: cmake_force
 CMakeFiles/pro2.dir/src/numToString.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/numToString.cpp.o: src/numToString.cpp
 CMakeFiles/pro2.dir/src/numToString.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pro2.dir/src/numToString.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pro2.dir/src/numToString.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/numToString.cpp.o -MF CMakeFiles/pro2.dir/src/numToString.cpp.o.d -o CMakeFiles/pro2.dir/src/numToString.cpp.o -c /root/Cpp-2/src/numToString.cpp
 
 CMakeFiles/pro2.dir/src/numToString.cpp.i: cmake_force
@@ -114,7 +142,7 @@ CMakeFiles/pro2.dir/src/numToString.cpp.s: cmake_force
 CMakeFiles/pro2.dir/src/pro2.cpp.o: CMakeFiles/pro2.dir/flags.make
 CMakeFiles/pro2.dir/src/pro2.cpp.o: src/pro2.cpp
 CMakeFiles/pro2.dir/src/pro2.cpp.o: CMakeFiles/pro2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pro2.dir/src/pro2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pro2.dir/src/pro2.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pro2.dir/src/pro2.cpp.o -MF CMakeFiles/pro2.dir/src/pro2.cpp.o.d -o CMakeFiles/pro2.dir/src/pro2.cpp.o -c /root/Cpp-2/src/pro2.cpp
 
 CMakeFiles/pro2.dir/src/pro2.cpp.i: cmake_force
@@ -127,6 +155,8 @@ CMakeFiles/pro2.dir/src/pro2.cpp.s: cmake_force
 
 # Object files for target pro2
 pro2_OBJECTS = \
+"CMakeFiles/pro2.dir/src/Get_Num.cpp.o" \
+"CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o" \
 "CMakeFiles/pro2.dir/src/add.cpp.o" \
 "CMakeFiles/pro2.dir/src/mul.cpp.o" \
 "CMakeFiles/pro2.dir/src/numToString.cpp.o" \
@@ -135,13 +165,15 @@ pro2_OBJECTS = \
 # External object files for target pro2
 pro2_EXTERNAL_OBJECTS =
 
+pro2: CMakeFiles/pro2.dir/src/Get_Num.cpp.o
+pro2: CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o
 pro2: CMakeFiles/pro2.dir/src/add.cpp.o
 pro2: CMakeFiles/pro2.dir/src/mul.cpp.o
 pro2: CMakeFiles/pro2.dir/src/numToString.cpp.o
 pro2: CMakeFiles/pro2.dir/src/pro2.cpp.o
 pro2: CMakeFiles/pro2.dir/build.make
 pro2: CMakeFiles/pro2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable pro2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Cpp-2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable pro2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pro2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
