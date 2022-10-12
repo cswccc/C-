@@ -67,7 +67,7 @@ inline void Get_Num(ll a[], int len, int lena, int plc)
     int ci = 0;
     for(int i = len-1; i >= 0; i--)
     {
-        if((Stack[plc][i]-'0')*pow(10,ci)+a[lena] >= mod) lena--,ci = 0;
+        if(ci == 8) lena--,ci = 0;
 
         a[lena] = (Stack[plc][i]-'0')*pow(10,ci)+a[lena];
         ci++;
@@ -76,12 +76,15 @@ inline void Get_Num(ll a[], int len, int lena, int plc)
 
 inline void Prepare_Mul()
 {
+    puts("mul");
     memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
+    Operator[num_operator] = 0;
     num_operator--;
 
-    // for(int i = 1; i <= top; i++) cout <<"++++"<<symbol[i]<<' '<<Stack[i]<<endl;
+    for(int i = 1; i <= top; i++) cout <<"++++"<<symbol[i]<<' '<<Stack[i]<<endl;
 
     int len1 = Stack[top].length(), len2 = Stack[top-1].length();
+    bool symbol1 = symbol[top], symbol2 = symbol[top-1];
     int lena = ceil(len1/8.0), lenb = ceil(len2/8.0);
     int lenc = 0;
     
@@ -92,33 +95,34 @@ inline void Prepare_Mul()
     Stack[top] = ""; symbol[top] = false; top--;
     
 
-    // for(int i = 0; i <= lena; i++) printf("%lld ",a[i]);
-    // puts("");
+    for(int i = 0; i <= lena; i++) printf("%lld ",a[i]);
+    puts("");
 
-    // for(int i = 0; i <= lenb; i++) printf("%lld ",b[i]);
-    // puts("");
+    for(int i = 0; i <= lenb; i++) printf("%lld ",b[i]);
+    puts("");
 
-    mul(a,b,c,lena,lenb,lenc);
+    mul(a,b,c,lena,lenb,lenc,symbol1,symbol2,symbol[top+1]);
 
     string s = Change_Num_To_String(c,lenc);
 
     Stack[++top] = s;
     // cout<<"===="<<s<<endl;
 
-    // for(int i = 1; i <= top; i++)
-    //     cout <<"***"<<Stack[i]<<endl;
+    for(int i = 1; i <= top; i++)
+        cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
     
-    // puts("------------");
+    puts("------------");
 }
 
-inline void Prepare_Bracket()
+inline void Work_For_Add(int start)
 {
-    int start = front_bracket[num];
-
+    puts("add");
     for(int i = 1; i <= top; i++)
     cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
 
     puts("------------");
+
+    int cnt = 0;
 
     for(int i = start; i < top; i++)
     {
@@ -135,13 +139,14 @@ inline void Prepare_Bracket()
         Get_Num(b,len2,lenb,i+1);
         Stack[i+1] = ""; symbol[i+1] = false;
 
-        // for(int j = 1; j <= lena; j++) printf("%lld ",a[j]);
-        // puts("");
-        // for(int j = 1; j <= lenb; j++) printf("%lld ",b[j]);
-        // puts("");
+        for(int j = 1; j <= lena; j++) printf("%lld ",a[j]);
+        puts("");
+        for(int j = 1; j <= lenb; j++) printf("%lld ",b[j]);
+        puts("");
 
         if(Operator[i] == '+') add(a,b,c,lena,lenb,lenc,symbol1,symbol2,symbol[i+1]);
         else if(Operator[i] == '-') add(a,b,c,lena,lenb,lenc,symbol1,!symbol2,symbol[i+1]);
+        Operator[i] = 0; cnt++;
 
         string s = Change_Num_To_String(c,lenc);
 
@@ -150,10 +155,14 @@ inline void Prepare_Bracket()
         // cout<<"/////"<<symbol[i+1]<<' '<<s<<endl;
     }
     
-    Stack[start] = Stack[top];
-    symbol[start] = symbol[top];
-    Stack[top] = ""; symbol[top] = false;
-    top = start;
+    if(start != top)
+    {
+        Stack[start] = Stack[top];
+        symbol[start] = symbol[top];
+        Stack[top] = ""; symbol[top] = false;
+        top = start;
+        num_operator -= cnt;
+    }
     
     for(int i = 1; i <= top; i++)
     cout <<"***"<<symbol[i]<<' '<<Stack[i]<<endl;
@@ -201,9 +210,16 @@ void Polynomial_work()
             if(Operator[num_operator] == '*')
                 Prepare_Mul();
             
-            Prepare_Bracket();
+            Work_For_Add(front_bracket[num]); num--;
         }
     }
+
+    if(Operator[num_operator] == '*') Prepare_Mul();
+
+    Work_For_Add(1);
+
+    if(symbol[1]) cout<<'-';
+    cout<<Stack[1]<<endl;
 }
 
 void Mathematical_work()

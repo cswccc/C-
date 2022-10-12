@@ -3,8 +3,11 @@
 
 const ll mod = 1e8;
 
-void mul(ll a[],ll b[], ll ans[],int lena, int lenb, int &len_ans)
+void mul(ll a[],ll b[], ll ans[],int lena, int lenb, int &len_ans, bool symbol1, bool symbol2, bool &sy_ans)
 {
+    if(symbol1 == symbol2) sy_ans = false;
+    else sy_ans = true;
+    
     len_ans = lena + lenb;
 
     for(int i = lena; i >= 1; i--)
