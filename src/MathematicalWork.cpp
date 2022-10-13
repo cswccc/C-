@@ -15,7 +15,7 @@ string pow(string input, string power)
 {
     string ans = "";
 
-    cout << input << ' ' << power << endl;
+    // cout << input << ' ' << power << endl;
 
     return ans;
 }
@@ -24,7 +24,7 @@ string abs(string input)
 {
     string ans = "";
 
-    cout << input << endl;
+    // cout << input << endl;
 
     int len = input.length();
 
@@ -41,7 +41,7 @@ string sqrt(string input)
 {
     string ans = "";
 
-    cout << input << endl;
+    // cout << input << endl;
 
     return ans;
 }
