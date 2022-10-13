@@ -1,5 +1,5 @@
-CMakeFiles/pro2.dir/src/Get_Num.cpp.o: /root/Cpp-2/src/Get_Num.cpp \
- /usr/include/stdc-predef.h /root/Cpp-2/includes/Get_Num.hpp \
+CMakeFiles/pro2.dir/src/Get_Num.cpp.o: /root/Cpp-3/src/Get_Num.cpp \
+ /usr/include/stdc-predef.h /root/Cpp-3/includes/Get_Num.hpp \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

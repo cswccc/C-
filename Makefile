@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Cpp-2
+CMAKE_SOURCE_DIR = /root/Cpp-3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Cpp-2
+CMAKE_BINARY_DIR = /root/Cpp-3
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/Cpp-2/CMakeFiles /root/Cpp-2//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Cpp-3/CMakeFiles /root/Cpp-3//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/Cpp-2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Cpp-3/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -200,6 +200,30 @@ src/Polynomial_work.s: src/Polynomial_work.cpp.s
 src/Polynomial_work.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.s
 .PHONY : src/Polynomial_work.cpp.s
+
+src/WrongDialog.o: src/WrongDialog.cpp.o
+.PHONY : src/WrongDialog.o
+
+# target to build an object file
+src/WrongDialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/WrongDialog.cpp.o
+.PHONY : src/WrongDialog.cpp.o
+
+src/WrongDialog.i: src/WrongDialog.cpp.i
+.PHONY : src/WrongDialog.i
+
+# target to preprocess a source file
+src/WrongDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/WrongDialog.cpp.i
+.PHONY : src/WrongDialog.cpp.i
+
+src/WrongDialog.s: src/WrongDialog.cpp.s
+.PHONY : src/WrongDialog.s
+
+# target to generate assembly for a file
+src/WrongDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/WrongDialog.cpp.s
+.PHONY : src/WrongDialog.cpp.s
 
 src/add.o: src/add.cpp.o
 .PHONY : src/add.o
@@ -315,6 +339,9 @@ help:
 	@echo "... src/Polynomial_work.o"
 	@echo "... src/Polynomial_work.i"
 	@echo "... src/Polynomial_work.s"
+	@echo "... src/WrongDialog.o"
+	@echo "... src/WrongDialog.i"
+	@echo "... src/WrongDialog.s"
 	@echo "... src/add.o"
 	@echo "... src/add.i"
 	@echo "... src/add.s"
