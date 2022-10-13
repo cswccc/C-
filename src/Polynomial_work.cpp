@@ -64,6 +64,10 @@ void HandleFormula()
                 }
                 Stack += input[i];
             }
+            else if(input[i] == ')')
+            {
+                
+            }
         }
     }
 }
