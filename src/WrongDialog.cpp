@@ -4,7 +4,7 @@
 
 void WrongDialog()
 {
-    printf("Your input is illegal!");
+    puts("Your input is illegal!");
 
     exit(0);
 }

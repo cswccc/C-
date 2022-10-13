@@ -1,4 +1,4 @@
-#include "Get_Num.hpp"
+#include "StringToNum.hpp"
 #include <iostream>
 #include <string>
 #include <cmath>
@@ -10,7 +10,7 @@ using namespace std;
 const int maxn = 1000000+5;
 const ll mod = 1e8;
 
-void Get_Num(ll a[], int len, int lena, string S)
+void StringToNum(ll a[], int len, int lena, string S)
 {
     int ci = 0;
     for(int i = len-1; i >= 0; i--)

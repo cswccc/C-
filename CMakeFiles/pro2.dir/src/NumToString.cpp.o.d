@@ -1,5 +1,5 @@
-CMakeFiles/pro2.dir/src/numToString.cpp.o: \
- /root/Cpp-3/src/numToString.cpp /usr/include/stdc-predef.h \
+CMakeFiles/pro2.dir/src/NumToString.cpp.o: \
+ /root/Cpp-3/src/NumToString.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

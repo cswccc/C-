@@ -5,9 +5,8 @@
 #include <algorithm>
 #include "mul.hpp"
 #include "add.hpp"
-#include "Get_Num.hpp"
+#include "StringToNum.hpp"
 #include "Polynomial_work.hpp"
-#include "numToString.hpp"
 // #include "Algebraic_expre_work.hpp"
 #define ll long long
 using namespace std;

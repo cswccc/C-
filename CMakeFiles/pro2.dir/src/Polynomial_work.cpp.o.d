@@ -192,8 +192,11 @@ CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /usr/include/c++/11/pstl/execution_defs.h /root/Cpp-3/includes/mul.hpp \
- /root/Cpp-3/includes/add.hpp /root/Cpp-3/includes/Get_Num.hpp \
- /root/Cpp-3/includes/numToString.hpp \
+ /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/stack \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
+ /root/Cpp-3/includes/mul.hpp /root/Cpp-3/includes/add.hpp \
+ /root/Cpp-3/includes/StringToNum.hpp \
+ /root/Cpp-3/includes/NumToString.hpp \
  /root/Cpp-3/includes/Polynomial_work.hpp \
  /root/Cpp-3/includes/WrongDialog.hpp

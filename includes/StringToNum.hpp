@@ -4,4 +4,4 @@
 using namespace std;
 
 
-void Get_Num(ll a[], int len, int lena, string S);
+void StringToNum(ll a[], int len, int lena, string S);

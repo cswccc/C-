@@ -153,29 +153,29 @@ src/Algebraic_expre_work.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.s
 .PHONY : src/Algebraic_expre_work.cpp.s
 
-src/Get_Num.o: src/Get_Num.cpp.o
-.PHONY : src/Get_Num.o
+src/NumToString.o: src/NumToString.cpp.o
+.PHONY : src/NumToString.o
 
 # target to build an object file
-src/Get_Num.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Get_Num.cpp.o
-.PHONY : src/Get_Num.cpp.o
+src/NumToString.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/NumToString.cpp.o
+.PHONY : src/NumToString.cpp.o
 
-src/Get_Num.i: src/Get_Num.cpp.i
-.PHONY : src/Get_Num.i
+src/NumToString.i: src/NumToString.cpp.i
+.PHONY : src/NumToString.i
 
 # target to preprocess a source file
-src/Get_Num.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Get_Num.cpp.i
-.PHONY : src/Get_Num.cpp.i
+src/NumToString.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/NumToString.cpp.i
+.PHONY : src/NumToString.cpp.i
 
-src/Get_Num.s: src/Get_Num.cpp.s
-.PHONY : src/Get_Num.s
+src/NumToString.s: src/NumToString.cpp.s
+.PHONY : src/NumToString.s
 
 # target to generate assembly for a file
-src/Get_Num.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Get_Num.cpp.s
-.PHONY : src/Get_Num.cpp.s
+src/NumToString.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/NumToString.cpp.s
+.PHONY : src/NumToString.cpp.s
 
 src/Polynomial_work.o: src/Polynomial_work.cpp.o
 .PHONY : src/Polynomial_work.o
@@ -200,6 +200,30 @@ src/Polynomial_work.s: src/Polynomial_work.cpp.s
 src/Polynomial_work.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.s
 .PHONY : src/Polynomial_work.cpp.s
+
+src/StringToNum.o: src/StringToNum.cpp.o
+.PHONY : src/StringToNum.o
+
+# target to build an object file
+src/StringToNum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/StringToNum.cpp.o
+.PHONY : src/StringToNum.cpp.o
+
+src/StringToNum.i: src/StringToNum.cpp.i
+.PHONY : src/StringToNum.i
+
+# target to preprocess a source file
+src/StringToNum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/StringToNum.cpp.i
+.PHONY : src/StringToNum.cpp.i
+
+src/StringToNum.s: src/StringToNum.cpp.s
+.PHONY : src/StringToNum.s
+
+# target to generate assembly for a file
+src/StringToNum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/StringToNum.cpp.s
+.PHONY : src/StringToNum.cpp.s
 
 src/WrongDialog.o: src/WrongDialog.cpp.o
 .PHONY : src/WrongDialog.o
@@ -273,30 +297,6 @@ src/mul.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/mul.cpp.s
 .PHONY : src/mul.cpp.s
 
-src/numToString.o: src/numToString.cpp.o
-.PHONY : src/numToString.o
-
-# target to build an object file
-src/numToString.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/numToString.cpp.o
-.PHONY : src/numToString.cpp.o
-
-src/numToString.i: src/numToString.cpp.i
-.PHONY : src/numToString.i
-
-# target to preprocess a source file
-src/numToString.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/numToString.cpp.i
-.PHONY : src/numToString.cpp.i
-
-src/numToString.s: src/numToString.cpp.s
-.PHONY : src/numToString.s
-
-# target to generate assembly for a file
-src/numToString.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/numToString.cpp.s
-.PHONY : src/numToString.cpp.s
-
 src/pro2.o: src/pro2.cpp.o
 .PHONY : src/pro2.o
 
@@ -333,12 +333,15 @@ help:
 	@echo "... src/Algebraic_expre_work.o"
 	@echo "... src/Algebraic_expre_work.i"
 	@echo "... src/Algebraic_expre_work.s"
-	@echo "... src/Get_Num.o"
-	@echo "... src/Get_Num.i"
-	@echo "... src/Get_Num.s"
+	@echo "... src/NumToString.o"
+	@echo "... src/NumToString.i"
+	@echo "... src/NumToString.s"
 	@echo "... src/Polynomial_work.o"
 	@echo "... src/Polynomial_work.i"
 	@echo "... src/Polynomial_work.s"
+	@echo "... src/StringToNum.o"
+	@echo "... src/StringToNum.i"
+	@echo "... src/StringToNum.s"
 	@echo "... src/WrongDialog.o"
 	@echo "... src/WrongDialog.i"
 	@echo "... src/WrongDialog.s"
@@ -348,9 +351,6 @@ help:
 	@echo "... src/mul.o"
 	@echo "... src/mul.i"
 	@echo "... src/mul.s"
-	@echo "... src/numToString.o"
-	@echo "... src/numToString.i"
-	@echo "... src/numToString.s"
 	@echo "... src/pro2.o"
 	@echo "... src/pro2.i"
 	@echo "... src/pro2.s"
