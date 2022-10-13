@@ -492,6 +492,7 @@ CMakeFiles/pro2.dir/src/MathematicalWork.cpp.o: src/MathematicalWork.cpp \
   includes/mul.hpp \
   includes/add.hpp \
   includes/StringToNum.hpp \
+  includes/NumToString.hpp \
   includes/WrongDialog.hpp
 
 CMakeFiles/pro2.dir/src/NumToString.cpp.o: src/NumToString.cpp \

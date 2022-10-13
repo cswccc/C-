@@ -194,4 +194,5 @@ CMakeFiles/pro2.dir/src/MathematicalWork.cpp.o: \
  /usr/include/c++/11/bits/vector.tcc \
  /usr/include/c++/11/pstl/execution_defs.h /root/Cpp-3/includes/mul.hpp \
  /root/Cpp-3/includes/add.hpp /root/Cpp-3/includes/StringToNum.hpp \
+ /root/Cpp-3/includes/NumToString.hpp \
  /root/Cpp-3/includes/WrongDialog.hpp
