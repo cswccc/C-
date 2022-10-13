@@ -7,7 +7,7 @@
 #include "add.hpp"
 #include "Get_Num.hpp"
 #include "numToString.hpp"
-#include "Polynomial_work.hpp"
+// #include "Polynomial_work.hpp"
 #define ll long long
 using namespace std;
 
@@ -103,5 +103,5 @@ void Algebraic_expre_work()
     }
 
     // cout <<ret<<endl;
-    Input_Formula(ret);
+    // Input_Formula(ret);
 }

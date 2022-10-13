@@ -194,5 +194,4 @@ CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o: \
  /usr/include/c++/11/bits/vector.tcc \
  /usr/include/c++/11/pstl/execution_defs.h /root/Cpp-2/includes/mul.hpp \
  /root/Cpp-2/includes/add.hpp /root/Cpp-2/includes/Get_Num.hpp \
- /root/Cpp-2/includes/numToString.hpp \
- /root/Cpp-2/includes/Polynomial_work.hpp
+ /root/Cpp-2/includes/numToString.hpp

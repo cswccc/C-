@@ -242,8 +242,7 @@ CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o: src/Algebraic_expre_work.cpp
   includes/mul.hpp \
   includes/add.hpp \
   includes/Get_Num.hpp \
-  includes/numToString.hpp \
-  includes/Polynomial_work.hpp
+  includes/numToString.hpp
 
 CMakeFiles/pro2.dir/src/Get_Num.cpp.o: src/Get_Num.cpp \
   /usr/include/stdc-predef.h \
@@ -1335,8 +1334,7 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o: src/pro2.cpp \
   includes/add.hpp \
   includes/Get_Num.hpp \
   includes/Polynomial_work.hpp \
-  includes/numToString.hpp \
-  includes/Algebraic_expre_work.hpp
+  includes/numToString.hpp
 
 
 /usr/include/c++/11/bits/vector.tcc:
@@ -1708,8 +1706,6 @@ includes/mul.hpp:
 /usr/include/c++/11/bits/ostream.tcc:
 
 /usr/include/c++/11/clocale:
-
-includes/Algebraic_expre_work.hpp:
 
 /usr/include/c++/11/debug/debug.h:
 

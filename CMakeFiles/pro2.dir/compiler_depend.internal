@@ -244,7 +244,6 @@ CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o
  /root/Cpp-2/includes/add.hpp
  /root/Cpp-2/includes/Get_Num.hpp
  /root/Cpp-2/includes/numToString.hpp
- /root/Cpp-2/includes/Polynomial_work.hpp
 
 CMakeFiles/pro2.dir/src/Get_Num.cpp.o
  /root/Cpp-2/src/Get_Num.cpp
@@ -1343,5 +1342,4 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o
  /root/Cpp-2/includes/Get_Num.hpp
  /root/Cpp-2/includes/Polynomial_work.hpp
  /root/Cpp-2/includes/numToString.hpp
- /root/Cpp-2/includes/Algebraic_expre_work.hpp
 

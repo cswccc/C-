@@ -8,7 +8,7 @@
 #include "Get_Num.hpp"
 #include "Polynomial_work.hpp"
 #include "numToString.hpp"
-#include "Algebraic_expre_work.hpp"
+// #include "Algebraic_expre_work.hpp"
 #define ll long long
 using namespace std;
 
@@ -37,9 +37,9 @@ void Dialog()
     switch(x)
     {
         case 0: exit(0); break;
-        case 1: Polynomial_work(); break;
-        case 2: Mathematical_work(); break;
-        case 3: Algebraic_expre_work(); break;
+        case 1: PolynomialWork(); break;
+        // case 2: Mathematical_work(); break;
+        // case 3: Algebraic_expre_work(); break;
         default: break;
     }
 }
