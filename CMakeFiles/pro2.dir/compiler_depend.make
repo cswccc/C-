@@ -890,6 +890,7 @@ CMakeFiles/pro2.dir/src/PolynomialWork.cpp.o: src/PolynomialWork.cpp \
   includes/StringToNum.hpp \
   includes/NumToString.hpp \
   includes/PolynomialWork.hpp \
+  includes/MathematicalWork.hpp \
   includes/WrongDialog.hpp
 
 CMakeFiles/pro2.dir/src/StringToNum.cpp.o: src/StringToNum.cpp \
@@ -1776,6 +1777,8 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o: src/pro2.cpp \
   includes/AlgebraicExpreWork.hpp
 
 
+src/mul.cpp:
+
 /usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
@@ -1942,15 +1945,9 @@ src/AlgebraicExpreWork.cpp:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
-includes/MathematicalWork.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
 /usr/include/c++/11/initializer_list:
 
 /usr/include/c++/11/iosfwd:
-
-src/mul.cpp:
 
 /usr/include/c++/11/ext/type_traits.h:
 
@@ -2005,6 +2002,10 @@ src/mul.cpp:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+includes/MathematicalWork.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 

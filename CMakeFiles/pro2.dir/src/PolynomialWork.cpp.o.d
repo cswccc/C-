@@ -199,4 +199,5 @@ CMakeFiles/pro2.dir/src/PolynomialWork.cpp.o: \
  /root/Cpp-3/includes/StringToNum.hpp \
  /root/Cpp-3/includes/NumToString.hpp \
  /root/Cpp-3/includes/PolynomialWork.hpp \
+ /root/Cpp-3/includes/MathematicalWork.hpp \
  /root/Cpp-3/includes/WrongDialog.hpp

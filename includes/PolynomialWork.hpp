@@ -3,9 +3,8 @@
 using namespace std;
 
 void PreWork();
-void GetInput();
-void HandleFormula();
+string PreHandleFormula(string formula);
+void FormulaToPostfix();
 void HandlePostfix();
 void Print();
-void PolynomialWork();
-void InputFormula(string formula);
+void PolynomialWork(string formula);

@@ -104,5 +104,5 @@ void AlgebraicExpreWork()
     }
 
     // cout <<ret<<endl;
-    InputFormula(ret);
+    PolynomialWork(ret);
 }

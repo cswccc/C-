@@ -14,6 +14,7 @@
 using namespace std;
 
 stack<string> input_Main;
+int cnt_for_input;
 
 void Input()
 {
@@ -26,20 +27,26 @@ void Input()
         getline(cin,input_now);
         
         if(input_now == "") break;
+
+        input_Main.push(input_now); cnt_for_input++;
     }
+}
+
+int CaseFor_P_Or_A(stack<string> input)
+{
+    if(cnt_for_input == 1) return 1;
+    else return 2;
 }
 
 void Dialog()
 {
-    
-    // switch(x)
-    // {
-    //     case 0: exit(0); break;
-    //     case 1: PolynomialWork(); break;
-    //     case 2: MathematicalWork(); break;
-    //     case 3: AlgebraicExpreWork(); break;
-    //     default: break;
-    // }
+    int x = CaseFor_P_Or_A(input_Main);
+    switch(x)
+    {
+        case 1: PolynomialWork(input_Main.top()); break;
+        // case 2: AlgebraicExpreWork(input_Main); break;
+        default: break;
+    }
 }
 
 int main()

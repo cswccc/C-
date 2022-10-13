@@ -9,18 +9,27 @@
 #include "StringToNum.hpp"
 #include "NumToString.hpp"
 #include "PolynomialWork.hpp"
+#include "MathematicalWork.hpp"
 #include "WrongDialog.hpp"
 #define ll long long
 using namespace std;
+
+struct EachNum
+{
+    string integer;
+    string decimal;
+    bool decimal_point;
+    bool symbol;
+};
 
 const int maxn = 10000000+5;
 
 string input_Po;
 string postfix_expression;
-stack<string> work;
+stack<EachNum> work;
 int cnt_for_work;
-bool symbol[maxn];
 ll a[maxn],b[maxn],c[maxn];
+ll a_dec[maxn], b_dec[maxn], c_dec[maxn];
 
 void PreWork()
 {
@@ -34,16 +43,122 @@ void PreWork()
     while(!work.empty()) work.pop();
 }
 
-void GetInput()
+string PreHandleFormula(string formula)
 {
-    getline(cin,input_Po);
-    printf("Please input the polynomial you want to solve:");
-    getline(cin,input_Po);
+    string ret = "";
+    int len = formula.length();
 
-    // cout << input_Po << endl;
+    // cout << "len = " << len << endl;
+
+    for(int i = 0; i < len; i++)
+    {
+        // cout << "formula[i] = " << formula[i] << endl;
+
+        if(formula[i] == ' ') continue;
+
+        if((formula[i] >= '0' && formula[i] <= '9')
+            || (formula[i] == '.' || formula[i] == '+' || formula[i] == '-' || formula[i] == '*')
+            || (formula[i] == '(' || (formula[i] == ')')))
+        {
+            ret += formula[i];
+        }
+
+        else if(formula[i] >= 'a' && formula[i] <= 'z')
+        {
+            string function_name = "";
+            while(i < len && (formula[i] >= 'a' && formula[i] <= 'z'))
+            {
+                function_name += formula[i];
+                i++;
+            }
+
+            int type = Function_Type(function_name);
+
+            cout << "type = " << type << endl;
+
+            if(type == -1) WrongDialog();
+
+            string num1_part = "", num2_part = "";
+            bool front_bra = false, back_bra = false;
+            bool num1_finished = false;
+            bool num1_point = false, num2_point = false;
+            bool num1_minus = false, num2_minus = false;
+
+            while(i < len)
+            {
+                // cout << "i = " << i << endl;
+                if(formula[i] == ' ') continue;
+                if(formula[i] == '(' && !front_bra) front_bra = true;
+                else if(front_bra)
+                {
+                    if(i == len-1 && formula[i] != ')') WrongDialog();
+
+                    if((formula[i] >= '0' && formula[i] <= '9'))
+                    {
+                        if(!num1_finished) num1_part += formula[i];
+                        else num2_part += formula[i];
+                    }
+                    else if(formula[i] == '.')
+                    {
+                        if(!num1_finished)
+                        {
+                            if(!num1_point && (formula[i-1] >= '0' && formula[i-1] <= '9') && (formula[i+1] >= '0' && formula[i+1] <= '9')) num1_point = true, num1_part += formula[i];
+                            else WrongDialog();
+                        }
+                        else
+                        {
+                            if(!num2_point && (formula[i-1] >= '0' && formula[i-1] <= '9') && (formula[i+1] >= '0' && formula[i+1] <= '9')) num2_point = true, num2_part += formula[i];
+                            else WrongDialog();
+                        }
+                    }
+                    else if(formula[i] == '-')
+                    {
+                        if(!num1_finished)
+                        {
+                            if(!num2_minus && (formula[i+1] >= '0' && formula[i+1] <= '9') && (formula[i-1] < '0' || formula[i-1] > '9')) num2_minus = true, num2_part += formula[i];
+                            else WrongDialog();
+                        }
+                        else
+                        {
+                            if(!num2_minus && (formula[i+1] >= '0' && formula[i+1] <= '9') && (formula[i-1] < '0' || formula[i-1] > '9')) num2_minus = true, num2_part += formula[i];
+                            else WrongDialog();
+                        }
+                    }
+                    else if(formula[i] == ',')
+                    {
+                        if(!num1_finished) num1_finished = true;
+                        else WrongDialog();
+                    }
+                    else if(formula[i] == ')')
+                    {
+                        back_bra = true;
+                        break;
+                    }
+                    else WrongDialog();
+                }
+                else WrongDialog();
+
+                i++;
+            }
+
+            if(!back_bra) WrongDialog();
+
+            switch(type)
+            {
+                case 0: ret += pow(num1_part,num2_part); break;
+                case 1: ret+= abs(num1_part); break;
+                case 2: ret+= sqrt(num1_part); break;
+            }
+        }
+        else WrongDialog();
+    }
+
+    cout << "ret = " << ret << endl;
+
+    return ret;
 }
 
-void HandleFormula()
+void FormulaToPostfix()
 {
     int len = input_Po.length();
 
@@ -52,7 +167,7 @@ void HandleFormula()
 
     for(int i = 0; i < len; i++)
     {
-        if(input_Po[i] >= '0' && input_Po [i] <= '9') now_get += input_Po[i];
+        if(input_Po[i] >= '0' && input_Po [i] <= '9' || input_Po[i] == '.') now_get += input_Po[i];
         else
         {
             if(now_get != "")
@@ -110,56 +225,61 @@ void HandleFormula()
     
     for(int i = Stack.length(); i >= 0; i--) 
     {
-        if(Stack[i] == '(') WrongDialog;
+        if(Stack[i] == '(') WrongDialog();
 
         postfix_expression += Stack[i];
     }
-    // cout << postfix_expression << endl;
+    cout << postfix_expression << endl;
 }
 
 void HandlePostfix()
 {
     int len = postfix_expression.length();
-    string now_get = "";
+    EachNum now_get;
     
     for(int i = 0; i < len; i++)
     {
         if(postfix_expression[i] <= '9' && postfix_expression[i] >= '0')
-            now_get += postfix_expression[i];
+        {
+            if(now_get.decimal_point) now_get.decimal += postfix_expression[i];
+            else now_get.integer += postfix_expression[i];
+        }
+        else if(postfix_expression[i] == '.')
+            now_get.decimal_point = true;
         else
         {
             if(postfix_expression[i] == ' ')
             {
                 work.push(now_get); cnt_for_work++;
-                now_get = "";
+
+                now_get.decimal = "";
+                now_get.integer = "";
+                now_get.decimal_point = false;
             }
             else if(postfix_expression[i] == '+' || postfix_expression[i] == '-' || postfix_expression[i] == '*')
             {
                 if(cnt_for_work < 2) WrongDialog();
 
-                string b_st = work.top(); work.pop();
-                string a_st = work.top(); work.pop();
-                bool symbol_b = symbol[cnt_for_work], symbol_a = symbol[cnt_for_work-1];
-                symbol[cnt_for_work] = false; symbol[cnt_for_work-1] = false;
+                EachNum b_st = work.top(); work.pop();
+                EachNum a_st = work.top(); work.pop();
+                bool symbol_b = b_st.symbol, symbol_a = a_st.symbol;
                 cnt_for_work -= 2;
 
                 memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
-                int len1 = a_st.length(), len2 = b_st.length();
-                int lena = ceil(len1/8.0), lenb = ceil(len2/8.0);
-                int lenc = 0;
+                memset(a_dec,0,sizeof(a_dec)); memset(b_dec,0,sizeof(b_dec)); memset(c_dec,0,sizoef(c_dec));
 
-                StringToNum(a,len1,lena,a_st);
-                StringToNum(b,len2,lenb,b_st);
+                StringToNum(a,a_dec,a_st);
+                StringToNum(b,b_dec,b_st);
 
                 // cout << symbol_a << ' ' << a_st << endl;
                 // cout << symbol_b << ' ' << b_st << endl;
 
                 if(postfix_expression[i] == '+')
-                    add(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
+                    // add(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
                 else if(postfix_expression[i] == '-')
-                    add(a,b,c,lena,lenb,lenc,symbol_a,!symbol_b,symbol[cnt_for_work+1]);
+                    // add(a,b,c,lena,lenb,lenc,symbol_a,!symbol_b,symbol[cnt_for_work+1]);
                 else
-                    mul(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
+                    // mul(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
                 
                 string c_st = ChangeNumToString(c,lenc);
                 // cout <<symbol[cnt_for_work+1] << ' ' << c_st << endl;
@@ -173,29 +293,18 @@ void HandlePostfix()
 void Print()
 {
     if(symbol[1]) cout << '-';
-    cout << work.top() << endl;
+    if(!work.empty()) cout << work.top() << endl;
+    else WrongDialog();
 }
 
-void PolynomialWork()
+void PolynomialWork(string formula)
 {
     PreWork();
+    // cout << formula << endl;
 
-    GetInput();
-
-    HandleFormula();
-
-    HandlePostfix();
-
-    Print();
-}
-
-void InputFormula(string formula)
-{
-    PreWork();
-
-    input_Po = formula;
-
-    HandleFormula();
+    input_Po = PreHandleFormula(formula);
+    
+    FormulaToPostfix();
 
     HandlePostfix();
 

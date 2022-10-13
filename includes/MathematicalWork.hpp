@@ -1,6 +1,9 @@
 #pragma once
+#include <cstring>
+using namespace std;
 
-void pow(string input, string power);
-void abs(string input);
-void sqrt(string input);
-void MathematicalWork();
+
+string pow(string input, string power);
+string abs(string input);
+string sqrt(string input);
+int Function_Type(string name);

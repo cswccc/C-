@@ -11,90 +11,46 @@ using namespace std;
 
 string input_Ma;
 
-void pow(string input, string power)
+string pow(string input, string power)
 {
+    string ans = "";
 
+    cout << input << ' ' << power << endl;
+
+    return ans;
 }
 
-void abs(string input)
+string abs(string input)
 {
+    string ans = "";
 
-}
-
-void sqrt(string input)
-{
-
-}
-
-int Check(string input)
-{
-    int len = input.length();
-
-    string function_name = "";
-    for(int i = 0; i < len; i++)
-    {
-        if(input[i] == ' ') continue;
-        else if(input[i] >= 'a' && input[i] <= 'z') function_name += input[i];
-        else break;
-    }
-
-    if(function_name == "pow") return 1;
-    if(function_name == "abs") return 2;
-    if(function_name == "sqrt") return 3;
-
-    return 0;
-}
-
-void PreForPow(string input)
-{
-    bool flag_Pow = false;
+    cout << input << endl;
 
     int len = input.length();
 
     for(int i = 0; i < len; i++)
     {
-        if(input[i] == '(') flag_Pow = true;
-        if(!flag_Pow) continue;
+        if(input[i] == '-') continue;
+        ans += input[i];
     }
+
+    return ans;
 }
 
-void PreForAbs(string input)
+string sqrt(string input)
 {
-    bool flag_Abs = false;
+    string ans = "";
 
-    int len = input.length();
+    cout << input << endl;
 
-    for(int i = 0; i < len; i++)
-    {
-        if(input[i] == '(') flag_Abs = true;
-        if(!flag_Abs) continue;
-    }
+    return ans;
 }
 
-void PreForSqrt(string input)
+int Function_Type(string name)
 {
-    bool flag_Sqrt = false;
+    if(name == "pow") return 0;
+    if(name == "abs") return 1;
+    if(name == "sqrt") return 2;
 
-    int len = input.length();
-
-    for(int i = 0; i < len; i++)
-    {
-        if(input[i] == '(') flag_Sqrt = true;
-        if(!flag_Sqrt) continue;
-    }
-}
-
-void MathematicalWork()
-{
-    getline(cin,input_Ma);
-    printf("Please input the mathematical function you want to solve:");
-    getline(cin,input_Ma);
-
-    switch(Check(input_Ma))
-    {
-        case 1: PreForPow(input_Ma); break;
-        case 2: PreForAbs(input_Ma); break;
-        case 3: PreForSqrt(input_Ma); break;
-        default: WrongDialog(); break;
-    }
+    return -1;
 }
