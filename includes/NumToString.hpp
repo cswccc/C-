@@ -3,4 +3,5 @@
 using namespace std;
 
 void ChangeEachNum(ll x, string &ret);
-string ChangeNumToString(ll a[], int lena);
+string ChangeIntegerPartNumToString(ll a[], int len);
+string ChangeDecimalPartNumToString(ll a[], int len);

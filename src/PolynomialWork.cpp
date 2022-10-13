@@ -28,14 +28,11 @@ string input_Po;
 string postfix_expression;
 stack<EachNum> work;
 int cnt_for_work;
-ll a[maxn],b[maxn],c[maxn];
+ll a_int[maxn],b_int[maxn],c_int[maxn];
 ll a_dec[maxn], b_dec[maxn], c_dec[maxn];
 
 void PreWork()
 {
-    memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
-    memset(symbol,false,sizeof(symbol));
-    
     input_Po = "";
     postfix_expression = "";
 
@@ -262,29 +259,36 @@ void HandlePostfix()
 
                 EachNum b_st = work.top(); work.pop();
                 EachNum a_st = work.top(); work.pop();
+                EachNum c_st;
                 bool symbol_b = b_st.symbol, symbol_a = a_st.symbol;
                 cnt_for_work -= 2;
 
-                memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
-                memset(a_dec,0,sizeof(a_dec)); memset(b_dec,0,sizeof(b_dec)); memset(c_dec,0,sizoef(c_dec));
+                memset(a_int,0,sizeof(a_int)); memset(b_int,0,sizeof(b_int)); memset(c_int,0,sizeof(c_int));
+                memset(a_dec,0,sizeof(a_dec)); memset(b_dec,0,sizeof(b_dec)); memset(c_dec,0,sizeof(c_dec));
 
-                StringToNum(a,a_dec,a_st);
-                StringToNum(b,b_dec,b_st);
+                int lena_int = 0, lena_dec = 0;
+                int lenb_int = 0, lenb_dec = 0;
+                int lenc_int = 0, lenc_dec = 0;
+
+                StringToNum(a_int, a_dec, lena_int, lena_dec, a_st.integer, a_st.decimal);
+                StringToNum(b_int, b_dec, lenb_int, lenb_dec, b_st.integer, b_st.decimal);
 
                 // cout << symbol_a << ' ' << a_st << endl;
                 // cout << symbol_b << ' ' << b_st << endl;
 
-                if(postfix_expression[i] == '+')
+                if(postfix_expression[i] == '+');
                     // add(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
-                else if(postfix_expression[i] == '-')
+                else if(postfix_expression[i] == '-');
                     // add(a,b,c,lena,lenb,lenc,symbol_a,!symbol_b,symbol[cnt_for_work+1]);
-                else
+                else;
                     // mul(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
                 
-                string c_st = ChangeNumToString(c,lenc);
+                // string c_st = ChangeNumToString(c,lenc);
+                c_st.integer = ChangeIntegerPartNumToString(c_int,lenc_int);
+                c_st.decimal = ChangeDecimalPartNumToString(c_dec,lenc_dec);
                 // cout <<symbol[cnt_for_work+1] << ' ' << c_st << endl;
 
-                work.push(c_st); cnt_for_work++;
+                // work.push(c_st); cnt_for_work++;
             }
         }
     }
@@ -292,9 +296,9 @@ void HandlePostfix()
 
 void Print()
 {
-    if(symbol[1]) cout << '-';
-    if(!work.empty()) cout << work.top() << endl;
-    else WrongDialog();
+    // if(symbol[1]) cout << '-';
+    // if(!work.empty()) cout << work.top() << endl;
+    // else WrongDialog();
 }
 
 void PolynomialWork(string formula)
