@@ -279,14 +279,16 @@ void HandlePostfix()
                 StringToNum(a_int, a_dec, lena_int, lena_dec, a_st.integer, a_st.decimal);
                 StringToNum(b_int, b_dec, lenb_int, lenb_dec, b_st.integer, b_st.decimal);
 
+                // puts("a:");
                 // for(int j = 0; j <= lena_int; j++) cout << a_int[j] << ' ';
                 // cout << '.';
-                // for(int j = 0; j <= lena_dec; j++) cout << a_dec[j] << ' ';
+                // for(int j = 1; j <= lena_dec; j++) cout << a_dec[j] << ' ';
                 // puts("");
 
+                // puts("b:");
                 // for(int j = 0; j <= lenb_int; j++) cout << b_int[j] << ' ';
                 // cout << '.';
-                // for(int j = 0; j <= lenb_dec; j++) cout << b_dec[j] << ' ';
+                // for(int j = 1; j <= lenb_dec; j++) cout << b_dec[j] << ' ';
                 // puts("");
 
                 // cout << a_st.symbol << ' ' << a_st.integer << ' ' << a_st.decimal << endl;
