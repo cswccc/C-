@@ -129,29 +129,53 @@ pro2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/build
 .PHONY : pro2/fast
 
-src/Algebraic_expre_work.o: src/Algebraic_expre_work.cpp.o
-.PHONY : src/Algebraic_expre_work.o
+src/AlgebraicExpreWork.o: src/AlgebraicExpreWork.cpp.o
+.PHONY : src/AlgebraicExpreWork.o
 
 # target to build an object file
-src/Algebraic_expre_work.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o
-.PHONY : src/Algebraic_expre_work.cpp.o
+src/AlgebraicExpreWork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.o
+.PHONY : src/AlgebraicExpreWork.cpp.o
 
-src/Algebraic_expre_work.i: src/Algebraic_expre_work.cpp.i
-.PHONY : src/Algebraic_expre_work.i
+src/AlgebraicExpreWork.i: src/AlgebraicExpreWork.cpp.i
+.PHONY : src/AlgebraicExpreWork.i
 
 # target to preprocess a source file
-src/Algebraic_expre_work.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.i
-.PHONY : src/Algebraic_expre_work.cpp.i
+src/AlgebraicExpreWork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.i
+.PHONY : src/AlgebraicExpreWork.cpp.i
 
-src/Algebraic_expre_work.s: src/Algebraic_expre_work.cpp.s
-.PHONY : src/Algebraic_expre_work.s
+src/AlgebraicExpreWork.s: src/AlgebraicExpreWork.cpp.s
+.PHONY : src/AlgebraicExpreWork.s
 
 # target to generate assembly for a file
-src/Algebraic_expre_work.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.s
-.PHONY : src/Algebraic_expre_work.cpp.s
+src/AlgebraicExpreWork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.s
+.PHONY : src/AlgebraicExpreWork.cpp.s
+
+src/MathematicalWork.o: src/MathematicalWork.cpp.o
+.PHONY : src/MathematicalWork.o
+
+# target to build an object file
+src/MathematicalWork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/MathematicalWork.cpp.o
+.PHONY : src/MathematicalWork.cpp.o
+
+src/MathematicalWork.i: src/MathematicalWork.cpp.i
+.PHONY : src/MathematicalWork.i
+
+# target to preprocess a source file
+src/MathematicalWork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/MathematicalWork.cpp.i
+.PHONY : src/MathematicalWork.cpp.i
+
+src/MathematicalWork.s: src/MathematicalWork.cpp.s
+.PHONY : src/MathematicalWork.s
+
+# target to generate assembly for a file
+src/MathematicalWork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/MathematicalWork.cpp.s
+.PHONY : src/MathematicalWork.cpp.s
 
 src/NumToString.o: src/NumToString.cpp.o
 .PHONY : src/NumToString.o
@@ -177,29 +201,29 @@ src/NumToString.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/NumToString.cpp.s
 .PHONY : src/NumToString.cpp.s
 
-src/Polynomial_work.o: src/Polynomial_work.cpp.o
-.PHONY : src/Polynomial_work.o
+src/PolynomialWork.o: src/PolynomialWork.cpp.o
+.PHONY : src/PolynomialWork.o
 
 # target to build an object file
-src/Polynomial_work.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.o
-.PHONY : src/Polynomial_work.cpp.o
+src/PolynomialWork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/PolynomialWork.cpp.o
+.PHONY : src/PolynomialWork.cpp.o
 
-src/Polynomial_work.i: src/Polynomial_work.cpp.i
-.PHONY : src/Polynomial_work.i
+src/PolynomialWork.i: src/PolynomialWork.cpp.i
+.PHONY : src/PolynomialWork.i
 
 # target to preprocess a source file
-src/Polynomial_work.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.i
-.PHONY : src/Polynomial_work.cpp.i
+src/PolynomialWork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/PolynomialWork.cpp.i
+.PHONY : src/PolynomialWork.cpp.i
 
-src/Polynomial_work.s: src/Polynomial_work.cpp.s
-.PHONY : src/Polynomial_work.s
+src/PolynomialWork.s: src/PolynomialWork.cpp.s
+.PHONY : src/PolynomialWork.s
 
 # target to generate assembly for a file
-src/Polynomial_work.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/Polynomial_work.cpp.s
-.PHONY : src/Polynomial_work.cpp.s
+src/PolynomialWork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pro2.dir/build.make CMakeFiles/pro2.dir/src/PolynomialWork.cpp.s
+.PHONY : src/PolynomialWork.cpp.s
 
 src/StringToNum.o: src/StringToNum.cpp.o
 .PHONY : src/StringToNum.o
@@ -330,15 +354,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pro2"
-	@echo "... src/Algebraic_expre_work.o"
-	@echo "... src/Algebraic_expre_work.i"
-	@echo "... src/Algebraic_expre_work.s"
+	@echo "... src/AlgebraicExpreWork.o"
+	@echo "... src/AlgebraicExpreWork.i"
+	@echo "... src/AlgebraicExpreWork.s"
+	@echo "... src/MathematicalWork.o"
+	@echo "... src/MathematicalWork.i"
+	@echo "... src/MathematicalWork.s"
 	@echo "... src/NumToString.o"
 	@echo "... src/NumToString.i"
 	@echo "... src/NumToString.s"
-	@echo "... src/Polynomial_work.o"
-	@echo "... src/Polynomial_work.i"
-	@echo "... src/Polynomial_work.s"
+	@echo "... src/PolynomialWork.o"
+	@echo "... src/PolynomialWork.i"
+	@echo "... src/PolynomialWork.s"
 	@echo "... src/StringToNum.o"
 	@echo "... src/StringToNum.i"
 	@echo "... src/StringToNum.s"

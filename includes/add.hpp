@@ -1,5 +1,5 @@
-#include <iostream>
 #pragma once
+#include <iostream>
 #include <cmath>
 #define ll long long
 

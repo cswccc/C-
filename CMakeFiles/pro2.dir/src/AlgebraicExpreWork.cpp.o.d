@@ -1,5 +1,5 @@
-CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o: \
- /root/Cpp-3/src/Algebraic_expre_work.cpp /usr/include/stdc-predef.h \
+CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.o: \
+ /root/Cpp-3/src/AlgebraicExpreWork.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -195,4 +195,5 @@ CMakeFiles/pro2.dir/src/Algebraic_expre_work.cpp.o: \
  /usr/include/c++/11/pstl/execution_defs.h /root/Cpp-3/includes/mul.hpp \
  /root/Cpp-3/includes/add.hpp /root/Cpp-3/includes/StringToNum.hpp \
  /root/Cpp-3/includes/NumToString.hpp \
- /root/Cpp-3/includes/PolynomialWork.hpp
+ /root/Cpp-3/includes/PolynomialWork.hpp \
+ /root/Cpp-3/includes/AlgebraicExpreWork.hpp

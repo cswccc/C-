@@ -7,7 +7,8 @@
 #include "add.hpp"
 #include "StringToNum.hpp"
 #include "NumToString.hpp"
-// #include "Polynomial_work.hpp"
+#include "PolynomialWork.hpp"
+#include "AlgebraicExpreWork.hpp"
 #define ll long long
 using namespace std;
 
@@ -25,7 +26,7 @@ int cnt;
 char cc[maxm];
 string ret;
 
-int Pre_For_Variables()
+int PreForVariables()
 {
     int len = strlen(cc);
     bool flag = false;
@@ -49,7 +50,7 @@ int Pre_For_Variables()
     return 1;
 }
 
-inline string Find(string vari)
+string Find(string vari)
 {
     for(int i = 1; i <= cnt; i++)
         if(vari == V[i].variable) return V[i].value;
@@ -57,7 +58,7 @@ inline string Find(string vari)
     return "";
 }
 
-void Work_For_Formula()
+void WorkForFormula()
 {
     // for(int i = 1; i <= cnt; i++)
     // {
@@ -87,7 +88,7 @@ void PreHandle_3()
     ret = "";
 }
 
-void Algebraic_expre_work()
+void AlgebraicExpreWork()
 {
     PreHandle_3();
 
@@ -95,13 +96,13 @@ void Algebraic_expre_work()
 
     while(scanf("%s",cc) != EOF)
     {
-        if(Pre_For_Variables() ==0)
+        if(PreForVariables() ==0)
         {
-            Work_For_Formula();
+            WorkForFormula();
             break;
         }
     }
 
     // cout <<ret<<endl;
-    // Input_Formula(ret);
+    InputFormula(ret);
 }

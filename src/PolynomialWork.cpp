@@ -8,14 +8,14 @@
 #include "add.hpp"
 #include "StringToNum.hpp"
 #include "NumToString.hpp"
-#include "Polynomial_work.hpp"
+#include "PolynomialWork.hpp"
 #include "WrongDialog.hpp"
 #define ll long long
 using namespace std;
 
 const int maxn = 10000000+5;
 
-string input;
+string input_Po;
 string postfix_expression;
 stack<string> work;
 int cnt_for_work;
@@ -27,7 +27,7 @@ void PreWork()
     memset(a,0,sizeof(a)); memset(b,0,sizeof(b)); memset(c,0,sizeof(c));
     memset(symbol,false,sizeof(symbol));
     
-    input = "";
+    input_Po = "";
     postfix_expression = "";
 
     cnt_for_work = 0;
@@ -36,23 +36,23 @@ void PreWork()
 
 void GetInput()
 {
-    getline(cin,input);
+    getline(cin,input_Po);
     printf("Please input the polynomial you want to solve:");
-    getline(cin,input);
+    getline(cin,input_Po);
 
-    // cout << input << endl;
+    // cout << input_Po << endl;
 }
 
 void HandleFormula()
 {
-    int len = input.length();
+    int len = input_Po.length();
 
     string now_get = "";
     string Stack = "";
 
     for(int i = 0; i < len; i++)
     {
-        if(input[i] >= '0' && input [i] <= '9') now_get += input[i];
+        if(input_Po[i] >= '0' && input_Po [i] <= '9') now_get += input_Po[i];
         else
         {
             if(now_get != "")
@@ -62,9 +62,9 @@ void HandleFormula()
                 now_get = "";
             }
 
-            if(input[i] == ' ') continue;
-            else if(input[i] == '(') Stack += '(';
-            else if(input[i] == '+' || input[i] == '-')
+            if(input_Po[i] == ' ') continue;
+            else if(input_Po[i] == '(') Stack += '(';
+            else if(input_Po[i] == '+' || input_Po[i] == '-')
             {
                 int len_Sta = Stack.length();
                 while(len_Sta != 0 && Stack[len_Sta-1] != '(')
@@ -73,9 +73,9 @@ void HandleFormula()
                     Stack.pop_back();
                     len_Sta--;
                 }
-                Stack += input[i];
+                Stack += input_Po[i];
             }
-            else if(input[i] == '*')
+            else if(input_Po[i] == '*')
             {
                 int len_Sta = Stack.length();
                 while(len_Sta != 0 && Stack[len_Sta-1] != '(' && Stack[len_Sta-1] != '-' && Stack[len_Sta-1] != '+')
@@ -84,9 +84,9 @@ void HandleFormula()
                     Stack.pop_back();
                     len_Sta--;
                 }
-                Stack += input[i];
+                Stack += input_Po[i];
             }
-            else if(input[i] == ')')
+            else if(input_Po[i] == ')')
             {
                 int len_Sta = Stack.length();
                 while(len_Sta != 0 && Stack[len_Sta-1] != '(')
@@ -114,7 +114,7 @@ void HandleFormula()
 
         postfix_expression += Stack[i];
     }
-    cout << postfix_expression << endl;
+    // cout << postfix_expression << endl;
 }
 
 void HandlePostfix()
@@ -151,8 +151,8 @@ void HandlePostfix()
                 StringToNum(a,len1,lena,a_st);
                 StringToNum(b,len2,lenb,b_st);
 
-                cout << symbol_a << ' ' << a_st << endl;
-                cout << symbol_b << ' ' << b_st << endl;
+                // cout << symbol_a << ' ' << a_st << endl;
+                // cout << symbol_b << ' ' << b_st << endl;
 
                 if(postfix_expression[i] == '+')
                     add(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
@@ -162,7 +162,7 @@ void HandlePostfix()
                     mul(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
                 
                 string c_st = ChangeNumToString(c,lenc);
-                cout <<symbol[cnt_for_work+1] << ' ' << c_st << endl;
+                // cout <<symbol[cnt_for_work+1] << ' ' << c_st << endl;
 
                 work.push(c_st); cnt_for_work++;
             }
@@ -181,6 +181,19 @@ void PolynomialWork()
     PreWork();
 
     GetInput();
+
+    HandleFormula();
+
+    HandlePostfix();
+
+    Print();
+}
+
+void InputFormula(string formula)
+{
+    PreWork();
+
+    input_Po = formula;
 
     HandleFormula();
 

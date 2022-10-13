@@ -1,59 +1,51 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <stack>
 #include <cstring>
 #include <algorithm>
 #include "mul.hpp"
 #include "add.hpp"
 #include "StringToNum.hpp"
-#include "Polynomial_work.hpp"
-// #include "Algebraic_expre_work.hpp"
+#include "PolynomialWork.hpp"
+#include "MathematicalWork.hpp"
+#include "AlgebraicExpreWork.hpp"
 #define ll long long
 using namespace std;
 
-const int maxn = 1000000+5;
-const ll mod = 1e8;
+stack<string> input_Main;
 
-void Mathematical_work();
+void Input()
+{
+    string input_now = "";
+
+    while(true)
+    {
+        input_now = "";
+
+        getline(cin,input_now);
+        
+        if(input_now == "") break;
+    }
+}
 
 void Dialog()
 {
-    puts("0: Exit");
-    puts("1: Polynomial Arithmetic");
-    puts("2: Mathematical Functions");
-    puts("3: Algebraic expression");
-    printf("Please type the number before the function you want to do:");
-
-    int x = 0;
-    scanf("%d",&x);
-
-    while(x < 0 || x > 3)
-    {
-        printf("Wrong input! The number needs to be between 0 and 3. Please type the number again:");
-        scanf("%d",&x);
-    }
-
-    switch(x)
-    {
-        case 0: exit(0); break;
-        case 1: PolynomialWork(); break;
-        // case 2: Mathematical_work(); break;
-        // case 3: Algebraic_expre_work(); break;
-        default: break;
-    }
+    
+    // switch(x)
+    // {
+    //     case 0: exit(0); break;
+    //     case 1: PolynomialWork(); break;
+    //     case 2: MathematicalWork(); break;
+    //     case 3: AlgebraicExpreWork(); break;
+    //     default: break;
+    // }
 }
 
 int main()
 {
-    while(true)
-    {
-        Dialog();
-    }
+    Input();
+    Dialog();
 
     return 0;
-}
-
-void Mathematical_work()
-{
-    printf("Please input the mathematical function you want to solve:");
 }
