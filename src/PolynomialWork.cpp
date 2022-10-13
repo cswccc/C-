@@ -22,7 +22,7 @@ struct EachNum
     bool symbol;
 };
 
-const int maxn = 10000000+5;
+const int maxn = 1000000+5;
 
 string input_Po;
 string postfix_expression;
@@ -310,7 +310,7 @@ void HandlePostfix()
                     // add(a,b,c,lena,lenb,lenc,symbol_a,!symbol_b,symbol[cnt_for_work+1]);
                 else
                 {
-
+                    mul(a_int, b_int, c_int, a_dec, b_dec, c_dec, lena_int, lenb_int, lenc_int, lena_dec, lenb_dec, lenc_dec, symbol_a, symbol_b, c_st.symbol);
                 }
                     // mul(a,b,c,lena,lenb,lenc,symbol_a,symbol_b,symbol[cnt_for_work+1]);
                 
@@ -334,7 +334,9 @@ void Print()
 
         cout << work.top().integer;
 
-        if(work.top().decimal != "") cout << '.' << work.top().decimal << endl;
+        if(work.top().decimal != "") cout << '.' << work.top().decimal;
+
+        puts("");
     }
     else WrongDialog();
 }

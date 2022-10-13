@@ -1,25 +1,39 @@
 #include "mul.hpp"
+#include <cstring>
 #define ll long long
+using namespace std;
 
-const ll mod = 1e8;
+const int maxn = 1000000+5;
 
-void mul(ll a[],ll b[], ll ans[],int lena, int lenb, int &len_ans, bool symbol1, bool symbol2, bool &sy_ans)
+const ll mod = 10;
+
+ll a[maxn],b[maxn],c[maxn];
+
+void mul(ll a_int[], ll b_int[], ll ans_int[], ll a_dec[], ll b_dec[], ll ans_dec[], int lena_int, int lenb_int, int &len_ans_int, int lena_dec, int lenb_dec, int &len_ans_dec, bool symbol1, bool symbol2, bool &sy_ans)
 {
+    memset(c,0,sizeof(c));
+
     if(symbol1 == symbol2) sy_ans = false;
     else sy_ans = true;
     
-    len_ans = lena + lenb;
+    for(int i = 1; i <= lena_int; i++) a[i] = a_int[i];
+    for(int j = 1; j <= lena_dec; j++) a[j+lena_int] = a_dec[j];
 
-    for(int i = lena; i >= 1; i--)
-    for(int j = lenb; j >= 1; j--) {
-        ans[i+j] += a[i]*b[j];
-        
-        if(ans[i+j] >= mod)
-        {
-            ans[i+j-1] += ans[i+j]/mod;
-            ans[i+j] %= mod;
-        }
+    for(int i = 1; i <= lenb_int; i++) b[i] = b_int[i];
+    for(int j = 1; j <= lenb_dec; j++) b[j+lena_int] = b_dec[j];
+
+    for(int i = lena_int+lena_dec; i >= 1; i--)
+    for(int j = lenb_int+lenb_dec; j >= 1; j--)
+    {
+        c[i+j] = a[i]*b[j];
+
+        c[i+j-1] += c[i+j]/mod;
+        c[i+j] %= mod;
     }
 
-    for(int i = len_ans; i >= 1; i--) ans[i-1] += ans[i]/mod,ans[i] %= mod;
+    for(int i = 1; i <= lenb_dec+lena_dec; i++) ans_dec[i] = c[lena_int + lenb_int + i];
+
+    for(int i = 0; i <= lena_int+lenb_int; i++) ans_int[i] = c[i];
+
+    len_ans_int = lena_int+lenb_int; len_ans_dec = lena_dec+lenb_dec;
 }

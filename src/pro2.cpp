@@ -16,6 +16,31 @@ using namespace std;
 stack<string> input_Main;
 int cnt_for_input;
 
+string RemoveSpace(string input)
+{
+    string ret = "";
+
+    int len = input.length();
+
+    for(int i = 0; i < len; i++)
+    {
+        if(input[i] == ' ') continue;
+        ret += input[i];
+    }
+
+    return ret;
+}
+
+bool isFormula(string input)
+{
+    int len = input.length();
+
+    for(int i = 0; i < len; i++)
+        if(input[i] == '=') return false;
+    
+    return true;
+}
+
 void Input()
 {
     string input_now = "";
@@ -25,10 +50,12 @@ void Input()
         input_now = "";
 
         getline(cin,input_now);
-        
-        if(input_now == "") break;
 
+        input_now = RemoveSpace(input_now);
+        
         input_Main.push(input_now); cnt_for_input++;
+
+        if(isFormula(input_now)) break;
     }
 }
 
@@ -44,7 +71,7 @@ void Dialog()
     switch(x)
     {
         case 1: PolynomialWork(input_Main.top()); break;
-        // case 2: AlgebraicExpreWork(input_Main); break;
+        case 2: AlgebraicExpreWork(input_Main); break;
         default: break;
     }
 }

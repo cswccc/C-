@@ -1,7 +1,6 @@
 #pragma once
 
-int PreForVariables();
-string Find(string vari);
-void WorkForFormula();
-void PreHandle_3();
-void AlgebraicExpreWork();
+string FindValueOf(string name);
+bool IsNotOperator(char c);
+void HnadleInputFormula();
+void AlgebraicExpreWork(stack<string> input);

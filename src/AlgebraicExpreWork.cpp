@@ -2,6 +2,7 @@
 #include <string>
 #include <cmath>
 #include <cstring>
+#include <stack>
 #include <algorithm>
 #include "mul.hpp"
 #include "add.hpp"
@@ -12,97 +13,87 @@
 #define ll long long
 using namespace std;
 
-const int maxn = 100+5;
-const int maxm = 100000+5;
-
-struct node
+struct Vari
 {
-    string variable;
+    string name;
     string value;
 };
 
-node V[maxn];
+const int maxn = 1000+5;
+const int maxm = 100000+5;
+
+string input_formula, output_formula;
+
+Vari V[maxn];
 int cnt;
-char cc[maxm];
-string ret;
 
-int PreForVariables()
-{
-    int len = strlen(cc);
-    bool flag = false;
-    string vari = "", val = "";
-
-    for(int i = 0; i < len; i++)
-    {
-        if(cc[i] == ' ') continue;
-        if(cc[i] == '+' || cc[i] == '-' || cc[i] == '*') return 0;
-        if(cc[i] == '=') flag = true;
-        else
-        {
-            if(!flag) vari += cc[i];
-            else val += cc[i];
-        }
-    }
-
-    V[++cnt].variable = vari;
-    V[cnt].value = val;
-
-    return 1;
-}
-
-string Find(string vari)
+string FindValueOf(string name)
 {
     for(int i = 1; i <= cnt; i++)
-        if(vari == V[i].variable) return V[i].value;
-    
-    return "";
+        if(name == V[i].name) return V[i].value;
+
+    return name;
 }
 
-void WorkForFormula()
+bool IsNotOperator(char c)
 {
-    // for(int i = 1; i <= cnt; i++)
-    // {
-    //     cout<<V[i].variable<<' '<<V[i].value<<endl;
-    // }
-    string vari = "";
+    return c != '*' && c != '+' && c != '-' && c != '(' && c != ')';
+}
 
-    int len = strlen(cc);
+void HnadleInputFormula()
+{
+    int len = input_formula.length();
+
+    string get_now = "";
 
     for(int i = 0; i < len; i++)
     {
-        if((cc[i] >= 'a' && cc[i] <= 'z') || (cc[i] >= 'A' && cc[i] <= 'Z')) vari += cc[i];
-        else
+        char c = input_formula[i];
+
+        if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
         {
-            if(vari != "") ret += Find(vari),vari = "";
-            ret += cc[i];
+            while(i < len && IsNotOperator(input_formula[i])) get_now += input_formula[i], i++;
+
+            output_formula += FindValueOf(get_now);
+
+            get_now = "";
         }
+        
+        if(i < len) output_formula += input_formula[i];
     }
-
-    if(vari != "") ret += Find(vari);
 }
 
-void PreHandle_3()
+void AlgebraicExpreWork(stack<string> input)
 {
-    cnt = 0;
-    memset(cc,0,sizeof(cc));
-    ret = "";
-}
+    input_formula = input.top(); input.pop();
 
-void AlgebraicExpreWork()
-{
-    PreHandle_3();
-
-    printf("Please input the algebraic expression you want to solve:\n");
-
-    while(scanf("%s",cc) != EOF)
+    while(!input.empty())
     {
-        if(PreForVariables() ==0)
+        string name = "", value = "";
+
+        string handle_now = input.top(); input.pop();
+
+        int len = handle_now.length();
+
+        bool flag_equalSymbol = false;
+
+        for(int i = 0; i < len; i++)
         {
-            WorkForFormula();
-            break;
+            if(!flag_equalSymbol)
+            {
+                if(handle_now[i] != '=') name += handle_now[i];
+                else flag_equalSymbol = true;
+            }
+            else
+                value += handle_now[i];
         }
+        Vari now;
+        now.name = name; now.value = value;
+
+        V[++cnt] = now;
     }
 
-    // cout <<ret<<endl;
-    PolynomialWork(ret);
+    HnadleInputFormula();
+
+    PolynomialWork(output_formula);
 }

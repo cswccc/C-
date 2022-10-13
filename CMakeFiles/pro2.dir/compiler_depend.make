@@ -209,6 +209,13 @@ CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.o: src/AlgebraicExpreWork.cpp \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/c++/11/stack \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_stack.h \
+  /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/utility \
   /usr/include/c++/11/bits/stl_relops.h \
@@ -221,7 +228,6 @@ CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.o: src/AlgebraicExpreWork.cpp \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/tuple \
   /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
@@ -234,7 +240,6 @@ CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.o: src/AlgebraicExpreWork.cpp \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
@@ -1524,7 +1529,26 @@ CMakeFiles/pro2.dir/src/add.cpp.o: src/add.cpp \
 
 CMakeFiles/pro2.dir/src/mul.cpp.o: src/mul.cpp \
   /usr/include/stdc-predef.h \
-  includes/mul.hpp
+  includes/mul.hpp \
+  /usr/include/c++/11/cstring \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/string.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/strings.h
 
 CMakeFiles/pro2.dir/src/pro2.cpp.o: src/pro2.cpp \
   /usr/include/stdc-predef.h \
@@ -1791,9 +1815,9 @@ src/mul.cpp:
 
 /usr/include/c++/11/backward/binders.h:
 
-/usr/include/c++/11/algorithm:
-
 /usr/include/c++/11/bits/deque.tcc:
+
+/usr/include/c++/11/algorithm:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
@@ -2229,6 +2253,14 @@ src/WrongDialog.cpp:
 
 src/PolynomialWork.cpp:
 
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/bits/stl_stack.h:
+
 /usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/c++/11/pstl/execution_defs.h:
@@ -2265,8 +2297,6 @@ src/add.cpp:
 
 /usr/include/c++/11/vector:
 
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
@@ -2284,12 +2314,6 @@ includes/NumToString.hpp:
 src/MathematicalWork.cpp:
 
 src/NumToString.cpp:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/c++/11/bits/stl_deque.h:
-
-/usr/include/c++/11/bits/stl_stack.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
