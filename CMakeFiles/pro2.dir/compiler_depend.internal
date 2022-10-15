@@ -3,7 +3,6 @@
 
 CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.o
  /root/Cpp-6/src/AlgebraicExpreWork.cpp
- /root/Cpp-3/src/AlgebraicExpreWork.cpp
  /usr/include/stdc-predef.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -246,16 +245,15 @@ CMakeFiles/pro2.dir/src/AlgebraicExpreWork.cpp.o
  /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/pstl/execution_defs.h
- /root/Cpp-3/includes/mul.hpp
- /root/Cpp-3/includes/add.hpp
- /root/Cpp-3/includes/StringToNum.hpp
- /root/Cpp-3/includes/NumToString.hpp
- /root/Cpp-3/includes/PolynomialWork.hpp
- /root/Cpp-3/includes/AlgebraicExpreWork.hpp
+ /root/Cpp-6/includes/mul.hpp
+ /root/Cpp-6/includes/add.hpp
+ /root/Cpp-6/includes/StringToNum.hpp
+ /root/Cpp-6/includes/NumToString.hpp
+ /root/Cpp-6/includes/PolynomialWork.hpp
+ /root/Cpp-6/includes/AlgebraicExpreWork.hpp
 
 CMakeFiles/pro2.dir/src/MathematicalWork.cpp.o
  /root/Cpp-6/src/MathematicalWork.cpp
- /root/Cpp-3/src/MathematicalWork.cpp
  /usr/include/stdc-predef.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -493,15 +491,14 @@ CMakeFiles/pro2.dir/src/MathematicalWork.cpp.o
  /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/pstl/execution_defs.h
- /root/Cpp-3/includes/mul.hpp
- /root/Cpp-3/includes/add.hpp
- /root/Cpp-3/includes/StringToNum.hpp
- /root/Cpp-3/includes/NumToString.hpp
- /root/Cpp-3/includes/WrongDialog.hpp
+ /root/Cpp-6/includes/mul.hpp
+ /root/Cpp-6/includes/add.hpp
+ /root/Cpp-6/includes/StringToNum.hpp
+ /root/Cpp-6/includes/NumToString.hpp
+ /root/Cpp-6/includes/WrongDialog.hpp
 
 CMakeFiles/pro2.dir/src/NumToString.cpp.o
  /root/Cpp-6/src/NumToString.cpp
- /root/Cpp-3/src/NumToString.cpp
  /usr/include/stdc-predef.h
  /usr/include/c++/11/string
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -652,11 +649,10 @@ CMakeFiles/pro2.dir/src/NumToString.cpp.o
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h
  /usr/include/c++/11/bits/charconv.h
  /usr/include/c++/11/bits/basic_string.tcc
- /root/Cpp-3/includes/NumToString.hpp
+ /root/Cpp-6/includes/NumToString.hpp
 
 CMakeFiles/pro2.dir/src/PolynomialWork.cpp.o
  /root/Cpp-6/src/PolynomialWork.cpp
- /root/Cpp-3/src/PolynomialWork.cpp
  /usr/include/stdc-predef.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -899,19 +895,18 @@ CMakeFiles/pro2.dir/src/PolynomialWork.cpp.o
  /usr/include/c++/11/bits/stl_deque.h
  /usr/include/c++/11/bits/deque.tcc
  /usr/include/c++/11/bits/stl_stack.h
- /root/Cpp-3/includes/mul.hpp
- /root/Cpp-3/includes/add.hpp
- /root/Cpp-3/includes/StringToNum.hpp
- /root/Cpp-3/includes/NumToString.hpp
- /root/Cpp-3/includes/PolynomialWork.hpp
- /root/Cpp-3/includes/MathematicalWork.hpp
- /root/Cpp-3/includes/WrongDialog.hpp
+ /root/Cpp-6/includes/mul.hpp
+ /root/Cpp-6/includes/add.hpp
+ /root/Cpp-6/includes/StringToNum.hpp
+ /root/Cpp-6/includes/NumToString.hpp
+ /root/Cpp-6/includes/PolynomialWork.hpp
+ /root/Cpp-6/includes/MathematicalWork.hpp
+ /root/Cpp-6/includes/WrongDialog.hpp
 
 CMakeFiles/pro2.dir/src/StringToNum.cpp.o
  /root/Cpp-6/src/StringToNum.cpp
- /root/Cpp-3/src/StringToNum.cpp
  /usr/include/stdc-predef.h
- /root/Cpp-3/includes/StringToNum.hpp
+ /root/Cpp-6/includes/StringToNum.hpp
  /usr/include/c++/11/string
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
@@ -1151,9 +1146,8 @@ CMakeFiles/pro2.dir/src/StringToNum.cpp.o
 
 CMakeFiles/pro2.dir/src/WrongDialog.cpp.o
  /root/Cpp-6/src/WrongDialog.cpp
- /root/Cpp-3/src/WrongDialog.cpp
  /usr/include/stdc-predef.h
- /root/Cpp-3/includes/WrongDialog.hpp
+ /root/Cpp-6/includes/WrongDialog.hpp
  /usr/include/c++/11/cstdlib
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
@@ -1335,7 +1329,6 @@ CMakeFiles/pro2.dir/src/WrongDialog.cpp.o
 
 CMakeFiles/pro2.dir/src/add.cpp.o
  /root/Cpp-6/src/add.cpp
- /root/Cpp-3/src/add.cpp
  /usr/include/stdc-predef.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -1515,7 +1508,7 @@ CMakeFiles/pro2.dir/src/add.cpp.o
  /usr/include/c++/11/bits/ostream.tcc
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
- /root/Cpp-3/includes/add.hpp
+ /root/Cpp-6/includes/add.hpp
  /usr/include/c++/11/cmath
  /usr/include/math.h
  /usr/include/x86_64-linux-gnu/bits/math-vector.h
@@ -1544,9 +1537,8 @@ CMakeFiles/pro2.dir/src/add.cpp.o
 
 CMakeFiles/pro2.dir/src/mul.cpp.o
  /root/Cpp-6/src/mul.cpp
- /root/Cpp-3/src/mul.cpp
  /usr/include/stdc-predef.h
- /root/Cpp-3/includes/mul.hpp
+ /root/Cpp-6/includes/mul.hpp
  /usr/include/c++/11/cstring
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
@@ -1731,7 +1723,6 @@ CMakeFiles/pro2.dir/src/mul.cpp.o
 
 CMakeFiles/pro2.dir/src/pro2.cpp.o
  /root/Cpp-6/src/pro2.cpp
- /root/Cpp-3/src/pro2.cpp
  /usr/include/stdc-predef.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
@@ -1974,10 +1965,10 @@ CMakeFiles/pro2.dir/src/pro2.cpp.o
  /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/vector.tcc
  /usr/include/c++/11/pstl/execution_defs.h
- /root/Cpp-3/includes/mul.hpp
- /root/Cpp-3/includes/add.hpp
- /root/Cpp-3/includes/StringToNum.hpp
- /root/Cpp-3/includes/PolynomialWork.hpp
- /root/Cpp-3/includes/MathematicalWork.hpp
- /root/Cpp-3/includes/AlgebraicExpreWork.hpp
+ /root/Cpp-6/includes/mul.hpp
+ /root/Cpp-6/includes/add.hpp
+ /root/Cpp-6/includes/StringToNum.hpp
+ /root/Cpp-6/includes/PolynomialWork.hpp
+ /root/Cpp-6/includes/MathematicalWork.hpp
+ /root/Cpp-6/includes/AlgebraicExpreWork.hpp
 
