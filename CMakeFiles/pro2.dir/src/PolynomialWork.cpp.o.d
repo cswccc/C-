@@ -1,5 +1,5 @@
 CMakeFiles/pro2.dir/src/PolynomialWork.cpp.o: \
- /root/Cpp-3/src/PolynomialWork.cpp /usr/include/stdc-predef.h \
+ /root/Cpp-6/src/PolynomialWork.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -195,9 +195,9 @@ CMakeFiles/pro2.dir/src/PolynomialWork.cpp.o: \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/stack \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
- /root/Cpp-3/includes/mul.hpp /root/Cpp-3/includes/add.hpp \
- /root/Cpp-3/includes/StringToNum.hpp \
- /root/Cpp-3/includes/NumToString.hpp \
- /root/Cpp-3/includes/PolynomialWork.hpp \
- /root/Cpp-3/includes/MathematicalWork.hpp \
- /root/Cpp-3/includes/WrongDialog.hpp
+ /root/Cpp-6/includes/mul.hpp /root/Cpp-6/includes/add.hpp \
+ /root/Cpp-6/includes/StringToNum.hpp \
+ /root/Cpp-6/includes/NumToString.hpp \
+ /root/Cpp-6/includes/PolynomialWork.hpp \
+ /root/Cpp-6/includes/MathematicalWork.hpp \
+ /root/Cpp-6/includes/WrongDialog.hpp

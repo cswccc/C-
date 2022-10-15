@@ -1,6 +1,6 @@
 CMakeFiles/pro2.dir/src/StringToNum.cpp.o: \
- /root/Cpp-3/src/StringToNum.cpp /usr/include/stdc-predef.h \
- /root/Cpp-3/includes/StringToNum.hpp /usr/include/c++/11/string \
+ /root/Cpp-6/src/StringToNum.cpp /usr/include/stdc-predef.h \
+ /root/Cpp-6/includes/StringToNum.hpp /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

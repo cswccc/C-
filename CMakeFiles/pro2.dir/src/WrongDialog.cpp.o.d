@@ -1,6 +1,6 @@
 CMakeFiles/pro2.dir/src/WrongDialog.cpp.o: \
- /root/Cpp-3/src/WrongDialog.cpp /usr/include/stdc-predef.h \
- /root/Cpp-3/includes/WrongDialog.hpp /usr/include/c++/11/cstdlib \
+ /root/Cpp-6/src/WrongDialog.cpp /usr/include/stdc-predef.h \
+ /root/Cpp-6/includes/WrongDialog.hpp /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

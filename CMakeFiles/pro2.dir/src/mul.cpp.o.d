@@ -1,5 +1,5 @@
-CMakeFiles/pro2.dir/src/mul.cpp.o: /root/Cpp-3/src/mul.cpp \
- /usr/include/stdc-predef.h /root/Cpp-3/includes/mul.hpp \
+CMakeFiles/pro2.dir/src/mul.cpp.o: /root/Cpp-6/src/mul.cpp \
+ /usr/include/stdc-predef.h /root/Cpp-6/includes/mul.hpp \
  /usr/include/c++/11/cstring \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
