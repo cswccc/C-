@@ -40,7 +40,7 @@ bool IsNotOperator(char c)
     return c != '*' && c != '+' && c != '-' && c != '(' && c != ')';
 }
 
-void HnadleInputFormula()
+void HnadleInputFormula()//change the algebraic expression into infix expression
 {
     int len = input_formula.length();
 
@@ -52,9 +52,9 @@ void HnadleInputFormula()
 
         if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
         {
-            while(i < len && IsNotOperator(input_formula[i])) get_now += input_formula[i], i++;
+            while(i < len && IsNotOperator(input_formula[i])) get_now += input_formula[i], i++;//the symbol for the end of variables is the operator
 
-            output_formula += FindValueOf(get_now);
+            output_formula += FindValueOf(get_now);//FindValueOf() is a function to find the value of get_now
 
             get_now = "";
         }
@@ -65,9 +65,9 @@ void HnadleInputFormula()
 
 void AlgebraicExpreWork(stack<string> input)
 {
-    input_formula = input.top(); input.pop();
+    input_formula = input.top(); input.pop();//the last input is the formula
 
-    while(!input.empty())
+    while(!input.empty())//handle for each variable
     {
         string name = "", value = "";
 
@@ -81,16 +81,16 @@ void AlgebraicExpreWork(stack<string> input)
         {
             if(!flag_equalSymbol)
             {
-                if(handle_now[i] != '=') name += handle_now[i];
+                if(handle_now[i] != '=') name += handle_now[i];//before '=' it is the name of the variable
                 else flag_equalSymbol = true;
             }
             else
-                value += handle_now[i];
+                value += handle_now[i];//after '=' it is the value of the variable
         }
         Vari now;
         now.name = name; now.value = value;
 
-        V[++cnt] = now;
+        V[++cnt] = now;//store the variable
     }
 
     HnadleInputFormula();

@@ -18,9 +18,9 @@ void StringToNum(ll a_int[], ll a_dec[], int &lena_int, int &lena_dec, string in
     lena_int = len;
     lena_dec = len_dec;
 
-    for(int i = 0; i < len; i++)
+    for(int i = 0; i < len; i++)//integer part
         a_int[i+1] = input_int[i]-'0';
 
-    for(int i = 0 ; i < len_dec; i++)
+    for(int i = 0 ; i < len_dec; i++)//decimal part
         a_dec[i+1] = input_dec[i]-'0';
 }
