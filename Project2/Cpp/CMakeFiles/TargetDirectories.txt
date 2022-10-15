@@ -1,3 +1,0 @@
-/mnt/d/csw/C++/Project/Project2/Cpp/CMakeFiles/pro2.dir
-/mnt/d/csw/C++/Project/Project2/Cpp/CMakeFiles/edit_cache.dir
-/mnt/d/csw/C++/Project/Project2/Cpp/CMakeFiles/rebuild_cache.dir
